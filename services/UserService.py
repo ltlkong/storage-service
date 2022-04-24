@@ -2,15 +2,15 @@ import logging
 from common.responses import error, success
 from models.User import User
 from common.core import encrypt_md5, generate_token
-import re
+from utils.verify_email import verify_email
 
 class UserService:
     def register(self, email:str, password:str):
         if email is None or password is None:
             return error("Please provide email and password",400)
 
-        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            return error('Email format incorrect', 400)
+        if not verify_email(email):
+            return error('Email invalid', 400)
 
         if len(password) < 8:
             return error('Password format incorrect',400)
@@ -40,17 +40,19 @@ class UserService:
             'user_id': user.id
         },3)
 
+        user.update(update_login=True)
+
         return success('Login success',{
                            'token':token,
                            'exp': 3
                        })
 
-    def generate_api_key(self, user_id:str):
+    def generate_api_key(self, user_id):
         if user_id is None:
             logging.error('User id is required to generate_api_key')
             error('Internal error',500)
 
-        key = generate_token({'id':user_id})
+        key = generate_token({'user_id':user_id})
 
         user = User.get(id=user_id)
 

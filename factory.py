@@ -7,6 +7,7 @@ from flask_restful import Api
 from models.ConfigType import ConfigType
 from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
 from resources.TestResource import TestResource
+from resources.StorageResource import StorageResource
 
 def create_app(config_type: ConfigType): 
     app = Flask(__name__)
@@ -50,5 +51,6 @@ def init_router(api: Api):
     api.add_resource(LoginResource, '/login')
     api.add_resource(RegisterResource, '/register')
     api.add_resource(ApiAuthResource, '/getkey')
+    api.add_resource(StorageResource, '/storage')
     api.add_resource(TestResource, '/testlogin')
     

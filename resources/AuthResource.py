@@ -1,8 +1,6 @@
-from flask_restful import Resource, reqparse
-from common.core import parse_args, verify_token
+from flask_restful import Resource
+from common.core import parse_args, auth
 from services.UserService import UserService
-
-parser = reqparse.RequestParser()
 
 class BaseAuthResource(Resource):
     def __init__(self):
@@ -26,9 +24,9 @@ class RegisterResource(BaseAuthResource):
         return self.user_service.register(email, password)
 
 class ApiAuthResource(BaseAuthResource):
-    @verify_token
-    def post(self, user_id):
-        return self.user_service.generate_api_key(user_id)
+    @auth.verify_token
+    def post(self):
+        return self.user_service.generate_api_key(auth.user_id)
         
 
         

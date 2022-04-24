@@ -14,6 +14,7 @@ class User(Model):
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
+    last_login_at = db.Column(db.DateTime, nullable=True, default=datetime.now)
 
     @staticmethod
     def get(**kwargs):
@@ -40,18 +41,22 @@ class User(Model):
 
         return True
 
-    def update(self, api_key=None, email=None, password=None):
+    def update(self, api_key=None, email=None, password=None, update_login=False):
         if api_key:
             self.api_key=api_key
         if email:
             self.email=email
         if password:
             self.password = encrypt_md5(password)
+        if update_login:
+            self.last_login_at = datetime.now()
 
         self.updated_at=datetime.now()
 
         try:
             db.session.commit()
+
+            logging.info("User {} updated".format(self.email))
 
             return True
         except Exception as e:
