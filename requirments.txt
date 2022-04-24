@@ -1,0 +1,11 @@
+requests 
+flask 
+flask_restful 
+python-dotenv 
+Flask-SQLAlchemy 
+stripe
+mysql
+mysql-connector-python
+flask-cors
+Flask-HTTPAuth
+pyjwt

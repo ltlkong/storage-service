@@ -1,0 +1,1000 @@
+[2022-04-23 02:10:01,681] INFO in app: this is info
+[2022-04-23 02:10:01,681] WARNING in app: this is warning
+[2022-04-23 02:10:01,681] ERROR in app: this is error
+[2022-04-23 02:10:01,681] CRITICAL in app: this is critical
+[2022-04-23 02:10:01,684] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 02:23:08,320] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 02:33:04,087] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:07:30,364] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:08:49,199] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:09:36,629] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:10:49,274] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:12:47,826] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:16:44,590] INFO in _internal:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2022-04-23 03:17:19,401] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:17:26,842] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:17:26] "GET / HTTP/1.1" 200 -
+[2022-04-23 03:18:00,869] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:18:04,191] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:18:04] "GET / HTTP/1.1" 200 -
+[2022-04-23 03:18:05,477] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:18:05] "GET / HTTP/1.1" 200 -
+[2022-04-23 03:18:37,507] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:18:41,135] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:18:41] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:19:07,114] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:19:10,313] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:19:10] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:19:11,236] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:19:11] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:19:53,027] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:19:56,518] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:19:56] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:19:57,455] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:19:57] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:23:27,581] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:23:31,275] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:23:31] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:23:32,189] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:23:32] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:25:58,968] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:26:02,423] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:26:02] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:26:03,351] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:26:03] "[33mGET / HTTP/1.1[0m" 404 -
+[2022-04-23 03:26:05,968] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:26:05] "[33mGET /a HTTP/1.1[0m" 404 -
+[2022-04-23 03:26:08,428] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:26:08] "[33mGET /a HTTP/1.1[0m" 404 -
+[2022-04-23 03:26:08,992] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:26:08] "[33mGET /a HTTP/1.1[0m" 404 -
+[2022-04-23 03:29:01,639] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:29:21,064] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:30:10,596] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:31:25,601] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:34:31,179] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:35:03,409] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:36:22,231] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:39:10,305] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:40:09,142] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:45:58,534] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:46:38,111] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 03:46:43,898] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 03:46:43] "[33mGET /a HTTP/1.1[0m" 404 -
+[2022-04-23 03:47:36,671] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 15:50:13,259] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:37:20,769] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:37:32,852] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:37:32] "[33mGET /login HTTP/1.1[0m" 404 -
+[2022-04-23 16:37:53,953] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:37:57,557] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:37:57] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+[2022-04-23 16:38:28,030] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:38:28] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+[2022-04-23 16:38:29,017] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:38:29] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+[2022-04-23 16:39:00,428] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:39:02,897] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/resources/AuthResource.py", line 52, in post
+    'token':token.decode('UTF-8')
+AttributeError: 'str' object has no attribute 'decode'
+[2022-04-23 16:39:02,901] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:39:02] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 16:39:52,867] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:39:55,398] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/resources/AuthResource.py", line 26, in post
+    'token':token.decode('UTF-8')
+AttributeError: 'str' object has no attribute 'decode'
+[2022-04-23 16:39:55,400] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:39:55] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 16:39:56,245] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/resources/AuthResource.py", line 26, in post
+    'token':token.decode('UTF-8')
+AttributeError: 'str' object has no attribute 'decode'
+[2022-04-23 16:39:56,247] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:39:56] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 16:40:38,318] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:40:41,429] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/resources/AuthResource.py", line 26, in post
+    'token':token.decode('UTF-8')
+AttributeError: 'str' object has no attribute 'decode'
+[2022-04-23 16:40:41,432] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:40:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 16:41:23,486] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:41:26,885] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:41:26] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+[2022-04-23 16:41:36,425] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:41:38,906] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/resources/AuthResource.py", line 52, in post
+    return jsonify({
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/json/__init__.py", line 354, in jsonify
+    raise TypeError("jsonify() behavior undefined when passed both args and kwargs")
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+[2022-04-23 16:41:38,913] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:41:38] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 16:42:08,475] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:42:10,838] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:42:10] "POST /login HTTP/1.1" 200 -
+[2022-04-23 16:46:37,298] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:47:16,724] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:47:16] "POST /login HTTP/1.1" 200 -
+[2022-04-23 16:47:22,699] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:47:22] "[33mPOST /testLogin HTTP/1.1[0m" 404 -
+[2022-04-23 16:47:26,803] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:47:26] "[33mGET /testLogin HTTP/1.1[0m" 404 -
+[2022-04-23 16:47:51,319] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:47:56,072] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:47:56] "[33mGET /testLogin HTTP/1.1[0m" 404 -
+[2022-04-23 16:48:00,409] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:48:00] "[31m[1mGET /testlogin HTTP/1.1[0m" 401 -
+[2022-04-23 16:50:16,668] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:50:19,667] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 159, in decorated
+    user = self.authenticate(auth, password)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 240, in authenticate
+    return self.ensure_sync(self.verify_password_callback)(
+TypeError: verify_pwd() takes 1 positional argument but 2 were given
+[2022-04-23 16:50:19,675] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:50:19] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 16:53:41,908] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:53:45,996] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 159, in decorated
+    user = self.authenticate(auth, password)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 240, in authenticate
+    return self.ensure_sync(self.verify_password_callback)(
+TypeError: verify_pwd() takes 1 positional argument but 2 were given
+[2022-04-23 16:53:46,003] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:53:46] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 16:55:18,233] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:55:20,497] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 159, in decorated
+    user = self.authenticate(auth, password)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 240, in authenticate
+    return self.ensure_sync(self.verify_password_callback)(
+TypeError: verify_pwd() takes 1 positional argument but 2 were given
+[2022-04-23 16:55:20,500] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:55:20] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 16:55:53,298] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:55:55,381] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 159, in decorated
+    user = self.authenticate(auth, password)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_httpauth.py", line 240, in authenticate
+    return self.ensure_sync(self.verify_password_callback)(
+TypeError: verify_pwd() takes 1 positional argument but 2 were given
+[2022-04-23 16:55:55,384] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:55:55] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 16:56:16,080] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:56:18,474] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+[2022-04-23 16:56:18,480] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:56:18] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 16:57:54,323] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 16:57:57,618] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 16:57:57] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:11:29,953] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:11:32,565] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:11:32] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:13:06,637] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:13:13,350] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:13:13] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:13:55,119] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:13:57,455] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:13:57] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:14:54,915] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:14:58,238] INFO in auth: {'username': 'a', 'password': 'b'}
+[2022-04-23 17:14:58,240] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:14:58] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:15:28,962] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:15:31,030] INFO in auth: {'username': 'a', 'password': 'b'}
+[2022-04-23 17:15:31,031] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/common/auth.py", line 25, in decorator
+    return f(*args, **kwargs)
+TypeError: get() takes 1 positional argument but 2 were given
+[2022-04-23 17:15:31,040] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:15:31] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:16:10,886] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:16:13,189] INFO in auth: {'username': 'a', 'password': 'b'}
+[2022-04-23 17:16:13,189] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/common/auth.py", line 25, in decorator
+    return f(*args)
+TypeError: get() takes 1 positional argument but 2 were given
+[2022-04-23 17:16:13,197] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:16:13] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:16:21,776] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:16:23,980] INFO in auth: {'username': 'a', 'password': 'b'}
+[2022-04-23 17:16:23,981] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/media-service/common/auth.py", line 25, in decorator
+    return f(*args)
+TypeError: get() takes 1 positional argument but 2 were given
+[2022-04-23 17:16:23,985] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:16:23] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:17:13,263] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:17:15,780] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+[2022-04-23 17:17:15,786] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:17:15] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:17:32,032] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:17:34,068] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+[2022-04-23 17:17:34,071] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:17:34] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:18:22,875] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:18:25,184] INFO in auth: (<resources.TestResource.TestResource object at 0x105cd1760>,)
+[2022-04-23 17:18:25,185] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+[2022-04-23 17:18:25,192] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:18:25] "[35m[1mGET /testlogin HTTP/1.1[0m" 500 -
+[2022-04-23 17:18:47,386] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:18:49,560] INFO in auth: (<resources.TestResource.TestResource object at 0x103d60730>,)
+[2022-04-23 17:18:49,563] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:18:49] "GET /testlogin HTTP/1.1" 200 -
+[2022-04-23 17:56:14,583] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:56:44,524] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 40, in post
+    email = request_data['email']
+KeyError: 'email'
+[2022-04-23 17:56:44,532] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:56:44] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 17:57:30,691] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 17:57:32,888] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 17:57:32] "POST /register HTTP/1.1" 200 -
+[2022-04-23 18:00:16,753] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:03:44,015] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:03:53,231] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+mariadb.DataError: Data type 'UUID' in column 0 not supported in MariaDB Connector/Python
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 43, in post
+    self.user_service.register(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 9, in register
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3363, in flush
+    self._flush(objects)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3463, in _flush
+    flush_context.execute()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 244, in save_obj
+    _emit_insert_statements(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1237, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (mariadb.DataError) Data type 'UUID' in column 0 not supported in MariaDB Connector/Python
+[SQL: INSERT INTO user (id, email, password, token, updated_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('8b8bb462-4149-4020-95d2-045b84772ebf'), 'a', 'b', None, datetime.datetime(2022, 4, 23, 18, 3, 53, 227079))]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 18:03:53,243] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:03:53] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:05:05,015] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:05:11,157] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+mariadb.DataError: Data type 'UUID' in column 0 not supported in MariaDB Connector/Python
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 43, in post
+    self.user_service.register(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 9, in register
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3363, in flush
+    self._flush(objects)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3463, in _flush
+    flush_context.execute()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 244, in save_obj
+    _emit_insert_statements(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1237, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (mariadb.DataError) Data type 'UUID' in column 0 not supported in MariaDB Connector/Python
+[SQL: INSERT INTO user (id, email, password, token, updated) VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('fa14d017-6554-49b9-bad1-0816009cd8be'), 'a', 'b', None, datetime.datetime(2022, 4, 23, 18, 5, 11, 154675))]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 18:05:11,166] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:05:11] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:06:29,174] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:06:32,098] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+mariadb.OperationalError: Unknown column 'created_at' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 43, in post
+    self.user_service.register(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 9, in register
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3363, in flush
+    self._flush(objects)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3463, in _flush
+    flush_context.execute()
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 244, in save_obj
+    _emit_insert_statements(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1237, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/homebrew/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (mariadb.OperationalError) Unknown column 'created_at' in 'field list'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('f42e5175-47c1-4cff-8d6b-d2f76c0027cf', 'a', 'b', None, datetime.datetime(2022, 4, 23, 18, 6, 32, 96016), datetime.datetime(2022, 4, 23, 18, 6, 32, 96039))]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2022-04-23 18:06:32,112] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:06:32] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:09:12,693] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:09:14,972] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:09:14] "POST /register HTTP/1.1" 200 -
+[2022-04-23 18:32:48,489] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:32:53,752] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 37, in post
+    request_data = parsing_args({
+  File "/Users/tielinli/Workspace/storage/common/core.py", line 11, in parsing_args
+    for key, type in args:
+ValueError: too many values to unpack (expected 2)
+[2022-04-23 18:32:53,761] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:32:53] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:34:40,495] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:34:42,994] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 43, in post
+    return error('Registration failed', 400)
+  File "/Users/tielinli/Workspace/storage/common/responses.py", line 7, in error
+    return jsonify({
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/json/__init__.py", line 361, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/json/__init__.py", line 139, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/json/__init__.py", line 57, in default
+    return super().default(o)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+[2022-04-23 18:34:43,003] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:34:43] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:37:40,004] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:37:42,799] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+[2022-04-23 18:37:42,814] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:37:42] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:39:31,127] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:39:33,966] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:39:33] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 18:40:38,052] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:40:46,660] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 41, in post
+    if not self.user_service.register(email, password):
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 23, in register
+    logging.info('User {} registration successful'.format(user.username))
+AttributeError: 'User' object has no attribute 'username'
+[2022-04-23 18:40:46,671] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:40:46] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 18:41:07,824] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:41:14,574] ERROR in UserService: Error (mariadb.IntegrityError) Duplicate entry 'a@a.com' for key 'email'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('a4be47f0-014b-4cd5-8783-35eb45c8aae5', 'a@a.com', 'b', None, datetime.datetime(2022, 4, 23, 18, 41, 14, 570280), datetime.datetime(2022, 4, 23, 18, 41, 14, 570307))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 18:41:14,576] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:41:14] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 18:41:27,384] INFO in UserService: User a@b.com registration successful
+[2022-04-23 18:41:27,386] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:41:27] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 18:58:19,532] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 18:58:25,228] INFO in User: User a@b.com registration successful
+[2022-04-23 18:58:25,230] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 18:58:25] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:00:03,149] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:00:10,015] INFO in User: User a@b.com registration successful
+[2022-04-23 19:00:10,017] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:00:10] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:02:04,534] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:02:08,309] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:02:08] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:02:15,768] INFO in User: User a@c.com registration successful
+[2022-04-23 19:02:15,773] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:02:15] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:02:31,899] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:02:37,656] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:02:37] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:02:44,747] INFO in User: User a@d.com registration successful
+[2022-04-23 19:02:44,749] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:02:44] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:04:10,838] ERROR in User: Error (mariadb.IntegrityError) Duplicate entry '36ae003b-d6b3-4a30-a79e-9dde22949894' for key 'PRIMARY'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('36ae003b-d6b3-4a30-a79e-9dde22949894', 'a@e.com', '593c9b4a9390551d53e5cacf28ebd638', None, datetime.datetime(2022, 4, 23, 19, 4, 10, 837828), datetime.datetime(2022, 4, 23, 19, 4, 10, 837856))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 19:04:10,842] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:10] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:15,461] ERROR in User: Error (mariadb.IntegrityError) Duplicate entry '36ae003b-d6b3-4a30-a79e-9dde22949894' for key 'PRIMARY'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('36ae003b-d6b3-4a30-a79e-9dde22949894', 'a@e.com', 'e11170b8cbd2d74102651cb967fa28e5', None, datetime.datetime(2022, 4, 23, 19, 4, 15, 457782), datetime.datetime(2022, 4, 23, 19, 4, 15, 457797))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 19:04:15,463] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:15] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:30,875] ERROR in User: Error (mariadb.IntegrityError) Duplicate entry '36ae003b-d6b3-4a30-a79e-9dde22949894' for key 'PRIMARY'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('36ae003b-d6b3-4a30-a79e-9dde22949894', 'a@e.com', 'e11170b8cbd2d74102651cb967fa28e5', None, datetime.datetime(2022, 4, 23, 19, 4, 30, 875138), datetime.datetime(2022, 4, 23, 19, 4, 30, 875154))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 19:04:30,879] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:30] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:50,550] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:04:53,018] INFO in User: User a@e.com registration successful
+[2022-04-23 19:04:53,020] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:53] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:04:53,557] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:53] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:54,033] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:54] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:54,380] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:54] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:58,771] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:58] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:04:59,744] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:04:59] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:05:04,212] ERROR in User: Error (mariadb.IntegrityError) Duplicate entry '9f654418-b36e-44dd-9a6a-ee598de773ed' for key 'PRIMARY'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('9f654418-b36e-44dd-9a6a-ee598de773ed', 'a@asd.com', 'e11170b8cbd2d74102651cb967fa28e5', None, datetime.datetime(2022, 4, 23, 19, 5, 4, 212062), datetime.datetime(2022, 4, 23, 19, 5, 4, 212079))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 19:05:04,214] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:05:04] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:05:05,352] ERROR in User: Error (mariadb.IntegrityError) Duplicate entry '9f654418-b36e-44dd-9a6a-ee598de773ed' for key 'PRIMARY'
+[SQL: INSERT INTO user (id, email, password, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('9f654418-b36e-44dd-9a6a-ee598de773ed', 'a@asd.com', 'e11170b8cbd2d74102651cb967fa28e5', None, datetime.datetime(2022, 4, 23, 19, 5, 5, 351096), datetime.datetime(2022, 4, 23, 19, 5, 5, 351109))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2022-04-23 19:05:05,354] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:05:05] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:06:06,329] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:06:09,230] INFO in User: User a@asd.com registration successful
+[2022-04-23 19:06:09,231] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:06:09] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:06:13,065] INFO in User: User a@asf.com registration successful
+[2022-04-23 19:06:13,070] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:06:13] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:06:14,311] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:06:14] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:06:19,320] INFO in User: User a@asaf.com registration successful
+[2022-04-23 19:06:19,322] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:06:19] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:08:02,190] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:08:04,844] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 41, in post
+    return self.user_service.register(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 16, in register
+    if User.get(email=email):
+  File "/Users/tielinli/Workspace/storage/models/User.py", line 20, in get
+    user = db.session.query(User).filter_by(kwargs).first()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+[2022-04-23 19:08:04,851] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:08:04] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 19:08:36,295] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:08:39,266] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 41, in post
+    return self.user_service.register(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 16, in register
+    if User.get(email=email):
+TypeError: get() got an unexpected keyword argument 'email'
+[2022-04-23 19:08:39,275] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:08:39] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-04-23 19:09:03,190] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:09:05,206] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:09:05] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:09:11,188] INFO in User: User a@asafe.com registration successful
+[2022-04-23 19:09:11,192] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:09:11] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:09:11,711] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:09:11] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-04-23 19:25:40,006] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:25:59,757] INFO in User: User l@l.com registration successful
+[2022-04-23 19:25:59,759] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:25:59] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 19:26:07,701] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:26:07] "POST /login HTTP/1.1" 200 -
+[2022-04-23 19:26:26,141] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:26:26] "[33mGET /logintest?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTgzOTk2N30.-wr63S4o6medfrv3DvfVHfbajlyWZPmEVmgyx248H3k HTTP/1.1[0m" 404 -
+[2022-04-23 19:26:47,956] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:26:52,288] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:26:52] "[33mGET /logintest?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTgzOTk2N30.-wr63S4o6medfrv3DvfVHfbajlyWZPmEVmgyx248H3k HTTP/1.1[0m" 404 -
+[2022-04-23 19:26:59,496] ERROR in auth: Something went wrong while verify_token It is required that you pass in a value for the "algorithms" argument when calling decode().
+[2022-04-23 19:26:59,500] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:26:59] "[35m[1mGET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTgzOTk2N30.-wr63S4o6medfrv3DvfVHfbajlyWZPmEVmgyx248H3k HTTP/1.1[0m" 500 -
+[2022-04-23 19:27:11,144] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:27:11] "POST /login?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTgzOTk2N30.-wr63S4o6medfrv3DvfVHfbajlyWZPmEVmgyx248H3k HTTP/1.1" 200 -
+[2022-04-23 19:27:31,251] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:27:31] "POST /login?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDAzMX0.oY5h9T7hw62qpVvMROVQ3dZHi7wc-FPSHsQXk2Wvpc4 HTTP/1.1" 200 -
+[2022-04-23 19:27:51,335] ERROR in auth: Something went wrong while verify_token It is required that you pass in a value for the "algorithms" argument when calling decode().
+[2022-04-23 19:27:51,340] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:27:51] "[35m[1mGET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDA1MX0.OMpMgSdVmSPB1aGF5MZnt6rMHeMJue1BhK5YKYiDyNA HTTP/1.1[0m" 500 -
+[2022-04-23 19:29:37,157] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:29:39,893] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:29:39] "GET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDA1MX0.OMpMgSdVmSPB1aGF5MZnt6rMHeMJue1BhK5YKYiDyNA HTTP/1.1" 200 -
+[2022-04-23 19:32:25,311] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:32:31,408] ERROR in app: Exception on /testlogin [GET]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 471, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 500, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/representations/json.py", line 21, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type builtin_function_or_method is not JSON serializable
+[2022-04-23 19:32:31,414] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:32:31] "[35m[1mGET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDA1MX0.OMpMgSdVmSPB1aGF5MZnt6rMHeMJue1BhK5YKYiDyNA HTTP/1.1[0m" 500 -
+[2022-04-23 19:34:20,689] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:34:23,311] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:34:23] "GET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDA1MX0.OMpMgSdVmSPB1aGF5MZnt6rMHeMJue1BhK5YKYiDyNA HTTP/1.1" 200 -
+[2022-04-23 19:35:47,486] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 19:35:49,777] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 19:35:49] "GET /testlogin?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImY1MzkwYTNlLTNjZWEtNDc2ZS1iYzU0LWY0NTU1NWRjYmMzZiIsImVtYWlsIjoibEBsLmNvbSIsImV4cCI6MTY1MTg0MDA1MX0.OMpMgSdVmSPB1aGF5MZnt6rMHeMJue1BhK5YKYiDyNA HTTP/1.1" 200 -
+[2022-04-23 20:08:18,130] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:09:42,715] INFO in User: User ltl@ltl.com registration successful
+[2022-04-23 20:09:42,717] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:09:42] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 20:10:05,227] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:10:05] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+[2022-04-23 20:10:10,278] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:10:10] "POST /login HTTP/1.1" 200 -
+[2022-04-23 20:11:39,945] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:13:08,051] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:13:17,033] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:13:17] "[31m[1mGET /getkey HTTP/1.1[0m" 405 -
+[2022-04-23 20:13:23,686] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:13:23] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:14:36,620] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:14:39,888] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:14:39] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:14:55,095] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:14:57,437] INFO in core: {'Authorization': None}
+[2022-04-23 20:14:57,439] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:14:57] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:18:25,934] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:18:34,594] INFO in core: {'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJhMzQ4ZDFjLTE4ZjAtNGJjYi1iOGRiLTE5NTIyOWY4ZjgyMiIsImV4cF9ob3VycyI6M30.b0WhXkqMVId3U44pCOjvhWSsORK_LsXhwGRd5T6YQGI'}
+[2022-04-23 20:18:34,596] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:18:34,600] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:18:34] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:18:42,378] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask/views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/tielinli/Workspace/storage/resources/AuthResource.py", line 18, in post
+    return self.user_service.login(email, password)
+  File "/Users/tielinli/Workspace/storage/services/UserService.py", line 29, in login
+    hash_password = encrypt_md5(password)
+  File "/Users/tielinli/Workspace/storage/common/core.py", line 27, in encrypt_md5
+    new_md5.update(str.encode(encoding='utf-8'))
+AttributeError: 'NoneType' object has no attribute 'encode'
+[2022-04-23 20:18:42,385] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:18:42] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-04-23 20:20:42,265] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:20:44,989] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:20:44] "POST /login HTTP/1.1" 200 -
+[2022-04-23 20:20:50,886] INFO in core: {'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJhMzQ4ZDFjLTE4ZjAtNGJjYi1iOGRiLTE5NTIyOWY4ZjgyMiIsImV4cF9ob3VycyI6M30.b0WhXkqMVId3U44pCOjvhWSsORK_LsXhwGRd5T6YQGI'}
+[2022-04-23 20:20:50,887] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:20:50,889] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:20:50] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:21:00,603] INFO in core: {'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJhMzQ4ZDFjLTE4ZjAtNGJjYi1iOGRiLTE5NTIyOWY4ZjgyMiIsImV4cF9ob3VycyI6M30.b0WhXkqMVId3U44pCOjvhWSsORK_LsXhwGRd5T6YQGI'}
+[2022-04-23 20:21:00,604] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:21:00,605] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:21:00] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:21:48,774] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:21:51,048] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:21:51,053] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:21:51] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:22:55,533] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:22:57,686] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:22:57,688] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:22:57] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:22:58,379] ERROR in core: Something went wrong while verify_token 'user_id'
+[2022-04-23 20:22:58,381] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:22:58] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:23:06,415] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:23:09,603] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:23:09] "POST /login HTTP/1.1" 200 -
+[2022-04-23 20:23:17,861] ERROR in core: Something went wrong while verify_token 'id'
+[2022-04-23 20:23:17,862] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:23:17] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:23:42,782] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:23:45,612] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:23:45] "POST /getkey HTTP/1.1" 200 -
+[2022-04-23 20:35:58,649] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:36:03,208] ERROR in core: Something went wrong while verify_token Entity namespace for "user" has no property "key"
+[2022-04-23 20:36:03,209] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:36:03] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:37:05,031] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:37:18,356] ERROR in core: Something went wrong while verify_token Entity namespace for "user" has no property "key"
+[2022-04-23 20:37:18,359] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:37:18] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:37:51,988] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:37:57,849] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:37:57] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+[2022-04-23 20:38:03,482] INFO in User: User ltl@ltl.com registration successful
+[2022-04-23 20:38:03,483] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:38:03] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+[2022-04-23 20:38:06,227] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:38:06] "POST /login HTTP/1.1" 200 -
+[2022-04-23 20:38:17,055] ERROR in core: Something went wrong while verify_token Entity namespace for "user" has no property "key"
+[2022-04-23 20:38:17,057] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:38:17] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:39:28,013] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:39:33,181] ERROR in core: Something went wrong while verify_token Entity namespace for "user" has no property "key"
+[2022-04-23 20:39:33,182] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:39:33] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:40:35,663] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:40:38,158] ERROR in core: Something went wrong while verify_token too many values to unpack (expected 2)
+[2022-04-23 20:40:38,160] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:40:38] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:44:17,158] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:44:19,691] ERROR in core: Something went wrong while verify_token too many values to unpack (expected 2)
+[2022-04-23 20:44:19,694] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:44:19] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:44:27,723] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:44:29,832] ERROR in core: Something went wrong while verify_token too many values to unpack (expected 2)
+[2022-04-23 20:44:29,834] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:44:29] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:44:39,292] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:44:40,806] ERROR in core: Something went wrong while verify_token too many values to unpack (expected 2)
+[2022-04-23 20:44:40,807] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:44:40] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:45:36,993] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:46:28,095] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:46:30,900] ERROR in core: Something went wrong while verify_token too many values to unpack (expected 2)
+[2022-04-23 20:46:30,904] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:46:30] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:46:59,820] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:47:02,591] ERROR in User: Error (mariadb.DataError) Data type 'dict' in column 0 not supported in MariaDB Connector/Python
+[SQL: UPDATE user SET api_key=? WHERE user.id = ?]
+[parameters: ({'api_key': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijc2ZDE5ZTY0LWE4MTAtNDY0Ni05YjVmLThjYzliNThlZDk2ZCJ9.s5G0VPbNjOtHHL7pYIiZbhAK3tFV6XQwVcM9Ef4rPNo'}, '76d19e64-a810-4646-9b5f-8cc9b58ed96d')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 20:47:02,594] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:47:02] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:47:24,400] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:47:26,212] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:47:26] "POST /getkey HTTP/1.1" 200 -
+[2022-04-23 20:50:52,393] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:50:54,493] ERROR in User: Error (mariadb.DataError) Data type 'builtin_function_or_method' in column 0 not supported in MariaDB Connector/Python
+[SQL: UPDATE user SET updated_at=? WHERE user.id = ?]
+[parameters: (<built-in method now of type object at 0x1015886c8>, '76d19e64-a810-4646-9b5f-8cc9b58ed96d')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 20:50:54,496] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:50:54] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:52:02,342] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:52:04,183] ERROR in User: Error (mariadb.DataError) Data type 'builtin_function_or_method' in column 0 not supported in MariaDB Connector/Python
+[SQL: UPDATE user SET updated_at=? WHERE user.id = ?]
+[parameters: (<built-in method now of type object at 0x100eb46c8>, '76d19e64-a810-4646-9b5f-8cc9b58ed96d')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 20:52:04,185] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:52:04] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:52:20,314] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:52:22,062] ERROR in User: Error (mariadb.DataError) Data type 'builtin_function_or_method' in column 0 not supported in MariaDB Connector/Python
+[SQL: UPDATE user SET updated_at=? WHERE user.id = ?]
+[parameters: (<built-in method now of type object at 0x104f946c8>, '76d19e64-a810-4646-9b5f-8cc9b58ed96d')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 20:52:22,068] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:52:22] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:52:45,674] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:52:49,167] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:52:49] "POST /login HTTP/1.1" 200 -
+[2022-04-23 20:53:01,655] ERROR in User: Error (mariadb.DataError) Data type 'builtin_function_or_method' in column 0 not supported in MariaDB Connector/Python
+[SQL: UPDATE user SET updated_at=? WHERE user.id = ?]
+[parameters: (<built-in method now of type object at 0x1028306c8>, '76d19e64-a810-4646-9b5f-8cc9b58ed96d')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2022-04-23 20:53:01,658] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:53:01] "[35m[1mPOST /getkey HTTP/1.1[0m" 500 -
+[2022-04-23 20:53:36,982] INFO in _internal:  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2022-04-23 20:53:39,236] INFO in _internal: 127.0.0.1 - - [23/Apr/2022 20:53:39] "POST /getkey HTTP/1.1" 200 -
