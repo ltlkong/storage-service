@@ -73,6 +73,12 @@ class Auth:
         return decorator
 
 
+
+class ApiAuth:
+    def __init__(self):
+        self.user_id = None
+        self.internal_key = None
+
     def verify_api_key(self,f):
         @wraps(f)
         def decorator(*args, **kwargs):
@@ -85,8 +91,9 @@ class Auth:
             try:
                 data = jwt.decode(key, current_app.config['SECRET_KEY'], algorithms=['HS256'])
 
-                if data['user_id']:
+                if data['user_id'] and data['internal_key']:
                     self.user_id = data['user_id']
+                    self.internal_key = data['internal_key']
                     return f(*args, **kwargs)
                     
                 return error('Key is invalid')
@@ -96,4 +103,3 @@ class Auth:
                 return error('Key is invalid')
 
         return decorator
-

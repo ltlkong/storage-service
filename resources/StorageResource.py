@@ -1,18 +1,26 @@
 from werkzeug.datastructures import FileStorage
-from common.core import parse_args, Auth
-from services.StorageService import StorageService
+from common.core import ApiAuth, parse_args
+from services.StorageService import StorageService, LocalStorageService
 from flask_restful import Resource
 
-auth = Auth()
+api=ApiAuth()
 
 class BaseStorageResource(Resource):
     def __init__(self):
-        self.storage_service=StorageService()
+        self.storage_service:StorageService=LocalStorageService()
 
 class StorageResource(BaseStorageResource):
-    @auth.verify_api_key
+    @api.verify_api_key
+    def get(self):
+        request_data = parse_args(('filename', str),('type',str))
+        filename= request_data['filename']
+        type= request_data['type']
+
+        return self.storage_service.get(str(api.internal_key), filename, type)
+
+    @api.verify_api_key
     def post(self):
         request_data = parse_args(('file', FileStorage),location='files')
         file = request_data['file']
 
-        return self.storage_service.store(file)
+        return self.storage_service.store(file, str(api.internal_key))

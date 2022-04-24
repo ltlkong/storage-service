@@ -31,6 +31,3 @@ class File(Model):
         logging.info('File {} created'.format(file.name))
 
         return True
-        
-        
-

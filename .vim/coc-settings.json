@@ -1,8 +1,10 @@
 {
   "cSpell.ignoreWords": [
+    "deactive",
     "decoraion",
     "dotenv",
     "jsonify",
-    "text"
+    "text",
+    "werkzeug"
   ]
 }

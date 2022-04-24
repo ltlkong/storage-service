@@ -1,15 +1,22 @@
 from datetime import datetime
+from enum import Enum
 from common.core import Model, db, encrypt_md5
 from datetime import datetime
 from uuid import uuid4
 import logging
+
+class UserStatus:
+    ACTIVE = 'active'
+    DEACTIVE = 'deactive'
+    BANNED = 'banned'
+
 
 class User(Model):
     __tablename__='users'
     id = db.Column(db.String(100), primary_key=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(50), nullable=False)
-    status= db.Column(db.String(50), nullable=False, default='active')
+    status= db.Column(db.String(50), nullable=False, default=UserStatus.ACTIVE)
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
