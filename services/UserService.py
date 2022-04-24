@@ -1,5 +1,7 @@
 import logging
+from uuid import uuid4
 from common.responses import error, success
+from models.ApiData import ApiData
 from models.User import User
 from common.core import encrypt_md5, generate_token
 from utils.verify_email import verify_email
@@ -46,22 +48,4 @@ class UserService:
                            'token':token,
                            'exp': 3
                        })
-
-    def generate_api_key(self, user_id):
-        if user_id is None:
-            logging.error('User id is required to generate_api_key')
-            error('Internal error',500)
-
-        key = generate_token({'user_id':user_id})
-
-        user = User.get(id=user_id)
-
-        if not user.update(key):
-            return error('Error occurred while updating user api key',500)
-
-        return success('API key generated', {
-                           'key':key
-                       })
-
-
 

@@ -8,6 +8,7 @@ from models.ConfigType import ConfigType
 from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
 from resources.TestResource import TestResource
 from resources.StorageResource import StorageResource
+import os
 
 def create_app(config_type: ConfigType): 
     app = Flask(__name__)
@@ -33,6 +34,11 @@ def create_app(config_type: ConfigType):
 
     if not logger_conf_path:
         raise RuntimeError('Logger config path not specified')
+
+    logs_path = os.getcwd() + '/logs/'
+
+    if not os.path.exists(logs_path):
+       os.makedirs(logs_path)
         
     with open(logger_conf_path, 'r') as f:
         logger_conf =json.loads(f.read())
@@ -50,7 +56,8 @@ def create_api(app: Flask) -> Api:
 def init_router(api: Api):
     api.add_resource(LoginResource, '/login')
     api.add_resource(RegisterResource, '/register')
-    api.add_resource(ApiAuthResource, '/getkey')
+    api.add_resource(ApiAuthResource, '/apidata')
     api.add_resource(StorageResource, '/storage')
+
     api.add_resource(TestResource, '/testlogin')
     

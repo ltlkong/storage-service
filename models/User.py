@@ -5,12 +5,11 @@ from uuid import uuid4
 import logging
 
 class User(Model):
+    __tablename__='users'
     id = db.Column(db.String(100), primary_key=True)
-# first_name = db.Column(db.String(100), nullable=False)
-# last_name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(50), nullable=False)
-    api_key = db.Column(db.String(150), nullable=True)
+    status= db.Column(db.String(50), nullable=False, default='active')
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
@@ -37,13 +36,11 @@ class User(Model):
 
             return False
 
-        logging.info('User {} registration successful'.format(user.email))
+        logging.info('User {} registered'.format(user.email))
 
         return True
 
-    def update(self, api_key=None, email=None, password=None, update_login=False):
-        if api_key:
-            self.api_key=api_key
+    def update(self,  email=None, password=None, update_login=False):
         if email:
             self.email=email
         if password:

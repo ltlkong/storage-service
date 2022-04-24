@@ -2,9 +2,9 @@ from flask.json import jsonify
 from flask_restful import Resource, reqparse
 from flask import request, current_app
 from functools import wraps
-from common.core import  auth
+from common.core import Auth
 
-parser = reqparse.RequestParser()
+auth = Auth()
 
 class TestResource(Resource):
     @auth.verify_token

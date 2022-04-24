@@ -11,9 +11,12 @@ class StorageService:
     def __init__(self):
         self.dir = current_app.config['STORAGE_DIR']
 
-    def store(self, file:FileStorage):
+    def store(self, file:FileStorage, enabled_file_types = None):
         if not file:
-            return error('error')
+            return error('Internal error')
+
+        if enabled_file_types and file.mimetype not in enabled_file_types:
+            return error('File type not supported')
 
         # Prepare file data
         filename = file.filename or ''
@@ -31,7 +34,7 @@ class StorageService:
 
             return error('error')
 
-        logging.info(filename)
+        logging.info('File saved to {}'.format(path))
         
         return success('success',{ 'filename': filename, 'key': key, 'size':size })
 

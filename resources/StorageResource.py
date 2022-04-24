@@ -1,7 +1,9 @@
 from werkzeug.datastructures import FileStorage
-from common.core import parse_args, auth
+from common.core import parse_args, Auth
 from services.StorageService import StorageService
 from flask_restful import Resource
+
+auth = Auth()
 
 class BaseStorageResource(Resource):
     def __init__(self):

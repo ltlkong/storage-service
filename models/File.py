@@ -4,11 +4,13 @@ from datetime import datetime
 import logging
 
 class File(Model):
+    __tablename__ = 'files'
     id = db.Column(db.BigInteger(), primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     key = db.Column(db.String(300), nullable=False, unique=True)
     type= db.Column(db.String(100), nullable=False)
     size = db.Column(db.BigInteger(), nullable=False)
+    previous_version=db.Column(db.BigInteger(), nullable=True)
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)

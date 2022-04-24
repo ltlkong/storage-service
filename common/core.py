@@ -12,11 +12,11 @@ db = SQLAlchemy()
 Model = db.Model
 
 # Take array of tuples ( str, type)
-def parse_args(*args, location='json'):
+def parse_args(*args, **kwargs):
     parser = reqparse.RequestParser()
 
     for key, type in args:
-        parser.add_argument(key, type=type, location=location)
+        parser.add_argument(key, type=type, **kwargs)
 
     return parser.parse_args()
     
@@ -27,6 +27,7 @@ def encrypt_md5(str:str):
 
     return new_md5.hexdigest()
 
+# TODO: Allow  file types
 def generate_token(data, exp_hours=None):
     jwt_data = {
         **data
@@ -96,4 +97,3 @@ class Auth:
 
         return decorator
 
-auth = Auth()
