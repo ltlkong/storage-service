@@ -3,7 +3,6 @@ from dotenv import dotenv_values
 import logging
 import logging.config
 import json
-from flask.helpers import get_env
 from flask_restful import Api
 from models.ConfigType import ConfigType
 from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
@@ -24,11 +23,8 @@ def create_app(config_type: ConfigType):
         }
     else:
         config = {
-            ** dotenv_values('.env.prod'),
-            ** dotenv_values('.env') 
+            ** dotenv_values('.env.prod')
         }
-
-    logging.info(config)
 
     app.config.update(config)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config['SQLALCHEMY_TRACK_MODIFICATIONS'] == 'True'

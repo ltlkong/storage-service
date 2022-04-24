@@ -27,7 +27,7 @@ class LocalStorageService(StorageService):
     # Store a file to the storage dir
     def store(self, file:FileStorage, api_internal_key):
         if not file:
-            return error('Internal error')
+            return error('Not file to upload')
 
         api_data = ApiData.get(internal_key=api_internal_key)
         # Check if file types supported

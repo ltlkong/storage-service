@@ -4,6 +4,7 @@
     "decoraion",
     "dotenv",
     "jsonify",
+    "mariadb",
     "text",
     "werkzeug"
   ]

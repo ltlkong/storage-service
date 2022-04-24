@@ -2,7 +2,6 @@ from flask_restful import Resource
 from common.core import parse_args, Auth
 from services.UserService import UserService
 from services.ApiService import ApiService
-import logging 
 
 auth = Auth()
 
@@ -30,6 +29,7 @@ class RegisterResource(BaseAuthResource):
 class ApiAuthResource(BaseAuthResource):
     def __init__(self):
         self.api_service = ApiService()
+
     @auth.verify_token
     def get(self):
         name = parse_args(('name', str))['name']

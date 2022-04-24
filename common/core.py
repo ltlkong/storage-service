@@ -16,7 +16,7 @@ def parse_args(*args, **kwargs):
     parser = reqparse.RequestParser()
 
     for key, type in args:
-        parser.add_argument(key, type=type, **kwargs)
+        parser.add_argument(key, type=type, required=False, **kwargs)
 
     return parser.parse_args()
     
