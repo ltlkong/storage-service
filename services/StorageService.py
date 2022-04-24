@@ -8,22 +8,30 @@ from models.File import File
 from models.ApiData import ApiData
 import mimetypes
 
+from utils.clear_none_in_dict import clear_none_in_dict
+
 class StorageService:
-    def store(self, file:FileStorage, api_internal_key:str):
+    def store(self, file:FileStorage, api_internal_key):
         pass
-    def get(self, api_internal_key:str, filename =None, key = None, type=None):
+
+    def get(self, api_internal_key, **kwargs):
+        pass
+
+    def get_file(self,file_key):
         pass
 
 class LocalStorageService(StorageService):
     def __init__(self):
         self.dir = current_app.config['STORAGE_DIR']
 
-    def store(self, file:FileStorage, api_internal_key:str):
+    # Store a file to the storage dir
+    def store(self, file:FileStorage, api_internal_key):
         if not file:
             return error('Internal error')
 
+        api_data = ApiData.get(internal_key=api_internal_key)
         # Check if file types supported
-        enabled_file_types = ApiData.get(internal_key=api_internal_key).get_enabled_file_types()
+        enabled_file_types = api_data.get_enabled_file_types()
         if enabled_file_types and file.mimetype not in enabled_file_types:
             return error('File type not supported {}'.format(file.mimetype))
 
@@ -37,7 +45,7 @@ class LocalStorageService(StorageService):
         try:
             file.save(path)
             size = os.stat(path).st_size
-            File.create(filename, key, file.mimetype, size)
+            File.create(filename, key, file.mimetype, size, api_data.internal_key)
         except Exception as e:
             logging.error('Error saving file {}'.format(str(e)))
 
@@ -45,13 +53,23 @@ class LocalStorageService(StorageService):
 
         logging.info('File saved to {}'.format(path))
         
-        return success('success',{ 'filename': filename, 'key': key, 'size':size })
+        return success('success',{ 'filename': filename, 'key': key, 'size':size, 'type': file.mimetype })
 
-    def get(self, api_internal_key:str, filename =None, key = None, type=None):
-        test_key = '87b13ffe-d41d-41cc-95b5-ce7fea7a6e59.jpg'
+    # Get all files object from current api key
+    def get(self, api_internal_key, **kwargs):
+        new_kwargs = clear_none_in_dict(**kwargs)
+        files = map(lambda f: f.dict(), File.get(api_data_key = api_internal_key, **new_kwargs))
 
-        return send_file(path_or_file=(self.generate_path('image/jpeg') + test_key))
+        return success('Your files',list(files))
+
+    # Get file
+    def get_file(self, file_key):
+        file = File.get(key=file_key)
+
+        if file is None:
+            return error('Error getting file {}'.format(file.name))
         
+        return send_file(path_or_file=(self.generate_path(file.type) + file_key))
 
     def generate_path(self, dir:str):
         current_directory = os.getcwd() + self.dir

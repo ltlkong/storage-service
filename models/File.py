@@ -15,9 +15,26 @@ class File(Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
+    api_data_key = db.Column(db.String(500), db.ForeignKey('api_data.internal_key'), nullable=False)
+    api_data = db.relationship('ApiData',
+        backref=db.backref('files', lazy=True))
+
     @staticmethod
-    def create( name, key, type, size):
-        file=File(name=name, key=key, type=type, size=size)
+    def get(**kwargs):
+        files = db.session.query(File).filter_by(**kwargs)
+
+        return files
+
+    @staticmethod
+    def filter(**kwargs):
+        files = db.session.query(File).filter(**kwargs)
+
+        return files
+
+        
+    @staticmethod
+    def create( name, key, type, size, api_data_key):
+        file=File(name=name, key=key, type=type, size=size, api_data_key=api_data_key)
 
         try:
             db.session.add(file)
@@ -31,3 +48,11 @@ class File(Model):
         logging.info('File {} created'.format(file.name))
 
         return True
+
+    def dict(self):
+        return {
+            'name': self.name,
+            'key': self.key,
+            'type': self.type
+
+        }

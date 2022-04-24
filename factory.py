@@ -3,11 +3,12 @@ from dotenv import dotenv_values
 import logging
 import logging.config
 import json
+from flask.helpers import get_env
 from flask_restful import Api
 from models.ConfigType import ConfigType
 from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
 from resources.TestResource import TestResource
-from resources.StorageResource import StorageResource
+from resources.StorageResource import StorageResource, PublicStorageResource
 import os
 
 def create_app(config_type: ConfigType): 
@@ -19,15 +20,19 @@ def create_app(config_type: ConfigType):
     if config_type == ConfigType.DEV:
         config = {
             ** dotenv_values('.env.dev'),
+            ** dotenv_values('.env') ,
+        }
+    else:
+        config = {
+            ** dotenv_values('.env.prod'),
             ** dotenv_values('.env') 
         }
 
-    config = {
-        ** dotenv_values('.env.prod'),
-        ** dotenv_values('.env') 
-    }
+    logging.info(config)
 
     app.config.update(config)
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config['SQLALCHEMY_TRACK_MODIFICATIONS'] == 'True'
+    app.config['DEBUG'] = config['DEBUG'] == 'True'
 
     # Log config
     logger_conf_path = config['LOGGER_CONFIG_PATH']
@@ -58,6 +63,7 @@ def init_router(api: Api):
     api.add_resource(RegisterResource, '/register')
     api.add_resource(ApiAuthResource, '/apidata')
     api.add_resource(StorageResource, '/storage')
+    api.add_resource(PublicStorageResource, '/file/<file_key>')
 
     api.add_resource(TestResource, '/testlogin')
     

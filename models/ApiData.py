@@ -12,7 +12,7 @@ class ApiData(Model):
     __tablename__ = 'api_data'
     id = db.Column(db.BigInteger(), primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    internal_key = db.Column(db.String(150), nullable=False)
+    internal_key = db.Column(db.String(150), nullable=False, unique=True)
     enabled_file_types = db.Column(db.Text, nullable=True)
     api_key=db.Column(db.String(500), nullable=False,unique=True)
     status=db.Column(db.String(50), nullable=False, default=ApiStatus.ACTIVE)

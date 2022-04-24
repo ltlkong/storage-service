@@ -40,7 +40,7 @@ class UserService:
 
         token = generate_token({
             'user_id': user.id
-        },3)
+        },1)
 
         user.update(update_login=True)
 
