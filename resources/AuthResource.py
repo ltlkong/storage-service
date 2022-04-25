@@ -1,4 +1,4 @@
-from flask_restful import Resource
+from flask_restful import Resource, reqparse
 from common.core import parse_args, Auth
 from services.UserService import UserService
 from services.ApiService import ApiService
@@ -32,14 +32,18 @@ class ApiAuthResource(BaseAuthResource):
 
     @auth.verify_token
     def get(self):
-        name = parse_args(('name', str))['name']
+        request_data = parse_args(('name', str), location='args')
+        name = request_data['name']
 
         return self.api_service.get_api_data(user_id=auth.user_id, name=name)
         
     @auth.verify_token
     def post(self):
-        request_data= parse_args(('enabled_file_types', str), action='append')
+        request_data= {
+            **parse_args(('enabled_file_types', str), action='append'),
+            **parse_args(('name',str))
+        }
         enabled_file_types = request_data['enabled_file_types']
-        name = parse_args(('name', str))['name']
+        name = request_data['name']
 
-        return self.api_service.generate_api_key(auth.user_id,name, enabled_file_types)
+        return self.api_service.generate_api_key(auth.user_id, name, enabled_file_types)

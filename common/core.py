@@ -16,9 +16,9 @@ def parse_args(*args, **kwargs):
     parser = reqparse.RequestParser()
 
     for key, type in args:
-        parser.add_argument(key, type=type, required=False, **kwargs)
+        parser.add_argument(key, type=type, **kwargs)
 
-    return parser.parse_args()
+    return parser.parse_args(strict=False)
     
     
 def encrypt_md5(str:str):
@@ -48,27 +48,33 @@ class Auth:
     def verify_token(self,f):
         @wraps(f)
         def decorator(*args, **kwargs):
+            # Getting token from header
             request_data = parse_args(('Authorization', str), location='headers')
             token = request_data['Authorization']
 
             if token is None:
                 return error('Your are missing a token')
 
+            # Decoding token
             try:
                 data = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256'])
 
-                if data['user_id']:
-                    self.user_id = data['user_id']
-
-                    return f(*args, **kwargs)
-                    
-                return error('Token is invalid')
             except jwt.ExpiredSignatureError as e:
                 return error('Token has expired')
             except Exception as e:
                 logging.error('Something went wrong while verify_token {}'.format(str(e)))
 
                 return error('Token is invalid')
+
+            # Return function
+            if data['user_id']:
+                self.user_id = data['user_id']
+
+                return f(*args, **kwargs)
+
+            logging.error('Something went wrong when verify_token')
+
+            return error('Internal error',500)
 
         return decorator
 
