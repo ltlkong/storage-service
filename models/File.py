@@ -15,26 +15,26 @@ class File(Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
-    api_data_key = db.Column(db.String(500), db.ForeignKey('api_data.internal_key'), nullable=False)
-    api_data = db.relationship('ApiData',
+    storage_key = db.Column(db.String(500), db.ForeignKey('storage.internal_key'), nullable=False)
+    storage = db.relationship('Storage',
         backref=db.backref('files', lazy=True))
 
     @staticmethod
     def get(**kwargs):
-        files = db.session.query(File).filter_by(**kwargs)
+        files = File.filter(**kwargs).first()
 
         return files
 
     @staticmethod
     def filter(**kwargs):
-        files = db.session.query(File).filter(**kwargs)
+        files = db.session.query(File).filter_by(**kwargs)
 
         return files
 
         
     @staticmethod
-    def create( name, key, type, size, api_data_key):
-        file=File(name=name, key=key, type=type, size=size, api_data_key=api_data_key)
+    def create( name, key, type, size, storage_key):
+        file=File(name=name, key=key, type=type, size=size, storage_key=storage_key)
 
         try:
             db.session.add(file)

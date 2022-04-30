@@ -1,48 +1,47 @@
 import logging
 from uuid import uuid4
-from common.responses import error, success
-from models.ApiData import ApiData
+from common.responses import  success
+from models.Storage import Storage
 from models.User import User
 from common.core import encrypt_md5, generate_token
 from utils.verify_email import verify_email
+from flask_restful import abort
 
 class UserService:
     def register(self, email:str, password:str):
-        if email is None or password is None:
-            return error("Please provide email and password",400)
-
         if not verify_email(email):
-            return error('Email invalid', 400)
+            abort(400, message='Email is not valid')
 
         if len(password) < 8:
-            return error('Password format incorrect',400)
+            abort(400, message='Password must be at least 8 characters')
 
         if User.get(email=email):
-            return error('User already registered', 400)
+            abort(400, message='Email already exists')
             
         if not User.create(email,password):
-            return error('Registration failed', 400)
+            abort(500, message='Failed to create user')
+        
+        logging.info('User created {}'.format(email))
         
         return success('Registration success', {
                            'email':email
                        }, 201)
 
     def login(self, email:str, password:str):
-        if email is None or password is None:
-            return error("Please provide email and password",400)
-
         hash_password = encrypt_md5(password)
 
         user = User.get(email=email, password=hash_password)
 
         if not user: 
-            return error('Email or password incorrect', 401)
+            abort(400, message='Email or password is not valid')
 
         token = generate_token({
             'user_id': user.id
         },1)
 
         user.update(update_login=True)
+
+        logging.info('User logged in {}'.format(email))
 
         return success('Login success',{
                            'token':token,

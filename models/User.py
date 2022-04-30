@@ -17,6 +17,7 @@ class User(Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(50), nullable=False)
     status= db.Column(db.String(50), nullable=False, default=UserStatus.ACTIVE)
+    # TODO: Allowed number of api data
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)

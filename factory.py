@@ -4,19 +4,17 @@ import logging
 import logging.config
 import json
 from flask_restful import Api
-from models.ConfigType import ConfigType
 from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
-from resources.TestResource import TestResource
 from resources.StorageResource import StorageResource, PublicStorageResource
 import os
 
-def create_app(config_type: ConfigType): 
+def create_app(config_type): 
     app = Flask(__name__)
 
     # Environment variables setup
     config = None
 
-    if config_type == ConfigType.DEV:
+    if config_type == 'dev':
         config = {
             ** dotenv_values('.env.dev'),
             ** dotenv_values('.env') ,
@@ -57,9 +55,8 @@ def create_api(app: Flask) -> Api:
 def init_router(api: Api):
     api.add_resource(LoginResource, '/login')
     api.add_resource(RegisterResource, '/register')
-    api.add_resource(ApiAuthResource, '/apidata')
-    api.add_resource(StorageResource, '/storage')
+    api.add_resource(ApiAuthResource, '/storage')
+    api.add_resource(StorageResource, '/storage/store')
     api.add_resource(PublicStorageResource, '/file/<file_key>')
 
-    api.add_resource(TestResource, '/testlogin')
     
