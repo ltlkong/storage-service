@@ -45,8 +45,6 @@ class File(Model):
 
             return False
 
-        logging.info('File {} created'.format(file.name))
-
         return True
 
     def dict(self):
@@ -54,5 +52,4 @@ class File(Model):
             'name': self.name,
             'key': self.key,
             'type': self.type
-
         }

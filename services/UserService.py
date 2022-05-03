@@ -4,22 +4,23 @@ from common.responses import  success
 from models.Storage import Storage
 from models.User import User
 from common.core import encrypt_md5, generate_token
-from utils.verify_email import verify_email
 from flask_restful import abort
+from http import HTTPStatus
+import re
 
 class UserService:
     def register(self, email:str, password:str):
-        if not verify_email(email):
-            abort(400, message='Email is not valid')
+        if not self.verify_email(email):
+            abort(HTTPStatus.BAD_REQUEST, message='Email is not valid')
 
-        if len(password) < 8:
-            abort(400, message='Password must be at least 8 characters')
+        if not self.verify_password(password):
+            abort(HTTPStatus.BAD_REQUEST, message='Password must be at least 8 characters')
 
         if User.get(email=email):
-            abort(400, message='Email already exists')
+            abort(HTTPStatus.BAD_REQUEST, message='Email already exists')
             
         if not User.create(email,password):
-            abort(500, message='Failed to create user')
+            abort(HTTPStatus.INTERNAL_SERVER_ERROR, message='Failed to create user')
         
         logging.info('User created {}'.format(email))
         
@@ -33,7 +34,7 @@ class UserService:
         user = User.get(email=email, password=hash_password)
 
         if not user: 
-            abort(400, message='Email or password is not valid')
+            abort(HTTPStatus.BAD_REQUEST, message='Email or password is not valid')
 
         token = generate_token({
             'user_id': user.id
@@ -47,4 +48,17 @@ class UserService:
                            'token':token,
                            'exp': 3
                        })
+
+    def verify_email(self, email:str) -> bool:
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            return False
+
+        return True
+    
+    def verify_password(self, password:str) -> bool:
+        if len(password) < 8:
+            return False
+
+        return True
+
 

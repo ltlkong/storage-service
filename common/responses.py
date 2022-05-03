@@ -1,4 +1,4 @@
-def success(message: str, data, code = 200, custom=False):
+def success(message= 'success', data = {}, code = 200, custom=False):
     if code > 300 or code < 200:
         raise ValueError('Logic error')
 

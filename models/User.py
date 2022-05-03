@@ -1,5 +1,4 @@
 from datetime import datetime
-from enum import Enum
 from common.core import Model, db, encrypt_md5
 from datetime import datetime
 from uuid import uuid4
@@ -9,7 +8,6 @@ class UserStatus:
     ACTIVE = 'active'
     DEACTIVE = 'deactive'
     BANNED = 'banned'
-
 
 class User(Model):
     __tablename__='users'
@@ -68,6 +66,3 @@ class User(Model):
             logging.error("Error {}".format(str(e)))
 
         return False
-
-        
-

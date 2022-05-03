@@ -1,8 +1,6 @@
 from datetime import datetime
 from common.core import Model, db
 from datetime import datetime
-import logging
-from uuid import uuid4
 
 class ApiStatus: 
     ACTIVE ='active'
@@ -16,8 +14,6 @@ class Storage(Model):
     enabled_file_types = db.Column(db.Text, nullable=True)
     api_key=db.Column(db.String(500), nullable=False,unique=True)
     status=db.Column(db.String(50), nullable=False, default=ApiStatus.ACTIVE)
-
-    # Storage size
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
@@ -41,7 +37,7 @@ class Storage(Model):
         return  storage
 
     @staticmethod
-    def get_all(**kwargs):
+    def filter(**kwargs):
         storage_by = db.session.query(Storage).filter_by(**kwargs)
 
         return  storage_by
@@ -49,30 +45,26 @@ class Storage(Model):
     @staticmethod
     def create(user_id,api_key,name, internal_key:str, enabled_file_types=None):
         storage=Storage(user_id=user_id, api_key=api_key, name=name, internal_key = internal_key)
+
         if enabled_file_types:
+            for enabled_file_type in enabled_file_types:
+                if enabled_file_type.find(',') != -1:
+                    raise Exception('Enabled file types should not contain commas')
             storage.set_enabled_file_types(enabled_file_types)
 
         try:
             db.session.add(storage)
             db.session.commit()
-        except Exception as e:
-            logging.error("Error {}".format(str(e)))
-
+        except Exception:
             db.session.rollback()
 
             return False
 
-        logging.info('Api data {} geneared'.format(storage.id))
-
         return True
+
     @staticmethod
     def is_name_exist(user_id, name):
-        try:
-            return len(list(map(lambda data: data.name,Storage.get_all(user_id=user_id, name=name)))) > 0
-        except Exception as e:
-            logging.error("Error {}".format(str(e)))
-
-            return False
+        return len(list(map(lambda data: data.name,Storage.filter(user_id=user_id, name=name)))) > 0
 
     def update(self, api_key=None, user_id=None, name=None):
         if api_key:
@@ -86,14 +78,11 @@ class Storage(Model):
 
         try:
             db.session.commit()
+        except Exception:
+            db.session.rollback()
+            return False
 
-            logging.info("Api data {} updated".format(self.email))
-
-            return True
-        except Exception as e:
-            logging.error("Error {}".format(str(e)))
-
-        return False
+        return True
 
     def dict(self):
         data = {

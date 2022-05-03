@@ -30,7 +30,6 @@ def generate_token(data, exp_hours=None):
 
     return token
 
-
 class Auth:
     def __init__(self):
         self.user_id = None
@@ -60,8 +59,6 @@ class Auth:
             return f(*args, **kwargs)
 
         return decorator
-
-
 
 class ApiAuth:
     def __init__(self):
