@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 
 class File(Model):
-    __tablename__ = 'files'
+    __tablename__ = 'file'
     id = db.Column(db.BigInteger(), primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     key = db.Column(db.String(300), nullable=False, unique=True)
@@ -15,9 +15,9 @@ class File(Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
-    storage_key = db.Column(db.String(500), db.ForeignKey('storage.internal_key'), nullable=False)
+    storage_id = db.Column(db.BigInteger(), db.ForeignKey('storage.id'), nullable=False)
     storage = db.relationship('Storage',
-        backref=db.backref('files', lazy=True))
+        backref=db.backref('file', lazy=True))
 
     @staticmethod
     def get(**kwargs):

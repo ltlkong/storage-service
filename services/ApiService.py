@@ -1,35 +1,43 @@
 import logging
-from uuid import uuid4
-from common.responses import  success
-from models.Storage import Storage
-from common.core import generate_token
-from utils.clear_none_in_dict import clear_none_in_dict
+from common.response import Response
 from flask_restful import abort
 from http import HTTPStatus
+from models.User import User
+from models.Service import Service
 
 class ApiService:
-    def generate_api_key(self, user_id, name=None,enabled_file_types=None):
-        if Storage.is_name_exist(user_id, name):
-            abort(HTTPStatus.BAD_REQUEST, message='Name already exist')
+    def create_service(self, user, name, description=None):
+        state = {
+            'http_status': HTTPStatus.CREATED,
+            'success': True,
+            'message': 'Service created',
+            'service_key': None
+        }
 
-        # Generate token
-        internal_key = str(uuid4())[:150]
-        key = generate_token({'user_id':user_id, 'internal_key':internal_key})
+        service = None
 
+        try:
+            service = Service.create(name=name, description=description, user=user)
+        except Exception as e:
+            state['http_status'] = HTTPStatus.BAD_REQUEST
+            state['success'] = False
+            state['message'] = str(e)
 
-        if not Storage.create(user_id=user_id, api_key=key, enabled_file_types=enabled_file_types, name=name, internal_key=internal_key):
-            abort(HTTPStatus.INTERNAL_SERVER_ERROR, message='Error creating storage')
+            
+        if not state['success']:
+            logging.error('Error creating service, data:{}'.format(state))
+            abort(state['http_status'], message=state['message'])
 
-        logging.info("Api key {} created".format(name))
+        logging.info('Service created, data:{}'.format(state))
 
-        return success('API key generated', {
-                           'key':key,
-                           'name': name
-                       })
+        data = { 'message': state['message'], 'service':  service.json() if service else None }
 
-    def get_storage_key(self, user_id, **kwargs):
-        new_kwargs = clear_none_in_dict(**kwargs)
+        return data
 
-        key_by_user = map(lambda data: data.dict(), Storage.filter(user_id = user_id, **new_kwargs))
+    def get_services(self, user, name=None):
+        services = Service.query.filter_by(user_id=user.id)
 
-        return success('Avaliable API data', list(key_by_user))
+        if name:
+            services = services.filter_by(name=name)
+
+        return list(map(lambda s: s.json(), services))

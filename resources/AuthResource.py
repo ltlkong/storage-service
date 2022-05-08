@@ -1,61 +1,59 @@
 import uuid
-from common.core import Auth
-from services.UserService import UserService
+from common.auth import Auth
+from services.AuthService import AuthService
 from services.StorageService import StorageService
 from resources.BaseResource import BaseResource
 from services.ApiService import ApiService
+from flask_restful import abort
+from http import HTTPStatus
+from common.response import Response
 
 auth = Auth()
 
 class BaseAuthResource(BaseResource):
     def __init__(self):
         super().__init__()
-        self.user_service = UserService()
-        self.api_service = ApiService()
+        self.auth_service = AuthService()
 
 class LoginResource(BaseAuthResource):
     # Login
-    def post(self):
-        self.parser.add_argument('email',type=str,location='json',required=True, help='Email is required')
-        self.parser.add_argument('password',type=str,location='json',required=True, help='Password is required')
-        received_data = self.parser.parse_args(strict=True)
-        email = received_data['email']
-        password = received_data['password']
+    def post(self, type):
+        data = None
 
-        return self.user_service.login(email, password)
+        if type == 'account':
+            self.parser.add_argument('email',type=str,location='json',required=True, help='Email is required')
+            self.parser.add_argument('password',type=str,location='json',required=True, help='Password is required')
+            self.parser.add_argument('remember',type=bool,location='json')
+            args = self.parser.parse_args(strict=True)
+
+            data = self.auth_service.loginWithAccount(args['email'],args['password'], args['remember'])
+
+        elif type == 'token':
+            self.parser.add_argument('token',type=str,location='json',required=True, help='Token is required')
+            args = self.parser.parse_args(strict=True)
+
+            data = self.auth_service.loginWithRememberToken(remember_token = args['token'])
+
+        if data:
+            return Response.ok(data['message'], data['login'])
+
+        abort(HTTPStatus.NOT_FOUND)
+
 
 class RegisterResource(BaseAuthResource):
     # Register a new user
     def post(self):
         self.parser.add_argument('email',type=str,location='json',required=True, help='Email is required')
         self.parser.add_argument('password',type=str,location='json',required=True, help='Password is required')
-        received_data = self.parser.parse_args(strict=True)
-        email = received_data['email']
-        password = received_data['password']
+        args = self.parser.parse_args(strict=True)
+        email = args['email']
+        password = args['password']
 
-        return self.user_service.register(email, password)
+        data = self.auth_service.register(email, password)
 
-class ApiAuthResource(BaseAuthResource):
-    def __init__(self):
-        super().__init__()
-        self.storage_service = StorageService()
+        return Response.created(data['message'])
 
-    # Get api key data
-    @auth.verify_token
-    def get(self):
-        self.parser.add_argument('name',type=str,location='args')
-        received_data = self.parser.parse_args()
-        name = received_data['name']
-
-        return self.api_service.get_storage_key(user_id=auth.user_id, name=name)
-        
-    # Create api key data
-    @auth.verify_token
-    def post(self):
-        self.parser.add_argument('name',default=str(uuid.uuid4()) ,type=str)
-        self.parser.add_argument('enabled_file_types',type=str, action='append')
-        received_data = self.parser.parse_args()
-        enabled_file_types = received_data['enabled_file_types']
-        name = received_data['name']
-
-        return self.api_service.generate_api_key(auth.user_id, name, enabled_file_types)
+class UserResource(BaseResource):
+    # Check if user exists
+    def get(self, email):
+        pass

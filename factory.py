@@ -4,9 +4,10 @@ import logging
 import logging.config
 import json
 from flask_restful import Api
-from resources.AuthResource import LoginResource ,RegisterResource, ApiAuthResource
-from resources.StorageResource import StorageResource, PublicStorageResource
+from resources.AuthResource import LoginResource ,RegisterResource
+from resources.ServiceResource import ServiceResource
 import os
+from resources.StorageResource import StorageResource
 
 def create_app(config_type): 
     app = Flask(__name__)
@@ -16,7 +17,6 @@ def create_app(config_type):
 
     if config_type == 'dev':
         config = {
-            ** dotenv_values('.env.dev'),
             ** dotenv_values('.env') ,
         }
     else:
@@ -25,8 +25,12 @@ def create_app(config_type):
         }
 
     app.config.update(config)
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config['SQLALCHEMY_TRACK_MODIFICATIONS'] == 'True'
-    app.config['DEBUG'] = config['DEBUG'] == 'True'
+
+    for key in config:
+        if config[key] == 'True':
+            app.config[key] = True
+        if config[key] == 'False':
+            app.config[key] = False
 
     # Log config
     logger_conf_path = config['LOGGER_CONFIG_PATH']
@@ -53,10 +57,12 @@ def create_api(app: Flask) -> Api:
     return api
 
 def init_router(api: Api):
-    api.add_resource(LoginResource, '/login')
+    api.add_resource(LoginResource, '/login/<type>')
     api.add_resource(RegisterResource, '/register')
-    api.add_resource(ApiAuthResource, '/storage')
-    api.add_resource(StorageResource, '/storage/store')
-    api.add_resource(PublicStorageResource, '/file/<file_key>')
+    api.add_resource(ServiceResource, '/service')
+
+# api.add_resource(ServiceAuthResource, '/storage')
+    api.add_resource(StorageResource, '/storage')
+# api.add_resource(PublicStorageResource, '/file/<file_key>')
 
     

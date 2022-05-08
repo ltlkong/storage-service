@@ -1,38 +1,36 @@
 from werkzeug.datastructures import FileStorage
-from common.core import ApiAuth
+from common.auth import ServiceAuth
 from resources.BaseResource import BaseResource
-from services.StorageService import StorageService, create_storage_service, StorageType
+from services.StorageService import StorageService
 from resources.BaseResource import BaseResource
+from common.response import Response
 
-api=ApiAuth()
+auth=ServiceAuth()
 
-class BaseStorageResource(BaseResource):
+class StorageResource(BaseResource):
     def __init__(self):
         super().__init__()
-        self.storage_service:StorageService=create_storage_service(StorageType.local)
+        self.storage_service = StorageService()
 
-class StorageResource(BaseStorageResource):
-    # Get files data
-    @api.verify_api_key
+    # Get all storages
+    @auth.verify_key
     def get(self):
         self.parser.add_argument('name',type=str,location='args')
         self.parser.add_argument('type',type=str,location='args')
-        received_data = self.parser.parse_args()
-        name= received_data['name']
-        type= received_data['type']
+        args = self.parser.parse_args()
 
-        return self.storage_service.get(api.internal_key, name=name, type=type)
+        data = self.storage_service.get(auth.current_service(), name=args['name'], type=args['type'])
 
-    # Upload file
-    @api.verify_api_key
+        return Response.ok(data['message'], data = data['storages'])
+
+    # Create storage
+    @auth.verify_key
     def post(self):
-        self.parser.add_argument('file',type=FileStorage,location='files', required=True, help='File is required')
-        received_data = self.parser.parse_args()
-        file = received_data['file']
+        self.parser.add_argument('name',type=str, required=False)
+        self.parser.add_argument('type',type=str, required=True)
+        self.parser.add_argument('enabled_file_types',type=str, action='append', required=False)
+        args = self.parser.parse_args()
 
-        return self.storage_service.store(file, api.internal_key)
+        data = self.storage_service.create(auth.current_service(), name=args['name'], type=args['type'], enabled_file_types=args['enabled_file_types'])
 
-class PublicStorageResource(BaseStorageResource):
-    # Download file
-    def get(self, file_key):
-        return self.storage_service.get_file(file_key)
+        return Response.created(data['message'])
