@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from flask import current_app, send_file
 
 class Response:
     @staticmethod
@@ -24,3 +25,7 @@ class Response:
         return {
             'message':message,
         }, HTTPStatus.CREATED
+
+    @staticmethod
+    def file(path_or_file):
+        return send_file(path_or_file=path_or_file)

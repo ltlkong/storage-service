@@ -1,7 +1,8 @@
+from typing import Dict
 from werkzeug.datastructures import FileStorage
 from common.response import  Response
 import logging
-from flask import current_app, send_from_directory, send_file
+from flask import current_app, send_file
 import os
 from uuid import uuid4
 from models.File import File
@@ -9,78 +10,118 @@ from models.Storage import Storage, StorageType
 import mimetypes
 from flask_restful import abort
 from utils.clear_none_in_dict import clear_none_in_dict
-from enum import Enum
+from http import HTTPStatus
 
 # Abstract
-class StorageService:
-    def store(self, file:FileStorage, api_internal_key):
+class FileService:
+    def upload(self, file:FileStorage) :
         pass
 
-    def get(self, api_internal_key, **kwargs):
+    def download(self, file_key):
         pass
 
-    def get_file(self,file_key):
+    def get_files(self, name=None, type=None, key=None):
         pass
 
 # Factory
-def create_storage_service(storage_id, service) -> StorageService:
-    storage = Storage.query.filter_by(id = storage_id, service_id= service.id).first()
+def create_file_service(storage_id, service=None):
+    storage = Storage.query.filter_by(id = storage_id)
 
-    if storage.type == StorageType.AMAZONS3:
-        return S3StorageService(storage)
-    else:
-        return LocalStorageService(storage)
+    if service:
+        storage =  storage.filter_by(service_id = service.id)
+
+    storage = storage.first()
+
+    if storage is None:
+        abort(HTTPStatus.NOT_FOUND, message="Storage not found")
+
+    return LocalFileService(storage)
 
 # Store files in server
-class LocalStorageService(StorageService):
+class LocalFileService(FileService):
     def __init__(self, storage):
         self.dir = current_app.config['STORAGE_DIR']
         self.storage = storage
 
     # Store a file to the storage dir
-    def store(self, file:FileStorage, api_internal_key):
-        # Check if file types supported
-        enabled_file_types = self.storage.get_enabled_file_types()
-        file_type = file.mimetype.split('/')[0]
+    def upload(self, file:FileStorage):
+        state = {
+            'http_status': HTTPStatus.CREATED,
+            'success': True,
+            'message': 'File uploaded',
+            'filename':None,
+            'size': None,
+            'key': None,
+            'type': None,
+            'path': None,
+            'file_type': None
+        }
 
-        if self.is_file_type_supported(file_type, enabled_file_types):
-            abort(400, message='File type not supported')
+        # Check if file types supported
+        state['file_type'] = file.mimetype.split('/')[0]
+
+        if self.storage.get_enabled_file_types() and state['file_type'] not in self.storage.get_enabled_file_types():
+            state['http_status'] = HTTPStatus.BAD_REQUEST
+            state['success'] = False
+            state['message'] = 'File type not supported: {}'.format(state['file_type'])
+            
+        if not state['success']:
+            logging.error('Error saving file {}'.format(state))
+            abort(400, message=state['message'])
 
         # Prepare file data
-        filename = file.filename or '???'
-        extension = mimetypes.guess_extension(file.mimetype) or ''
-        key = str(uuid4()) + extension
-        path = self.generate_path(file.mimetype) + key
-        size = None
+        state['filename'] = file.filename or 'unknown'
+        state['key'] = str(uuid4()) 
+        state['path'] = self.generate_path(state['file_type']) + state['key'] +'.' + state['filename'].split('.')[-1]
 
         try:
-            file.save(path)
-            size = os.stat(path).st_size
-            File.create(filename, key, file.mimetype, size, self.storage.id)
+            file.save(state['path'])
+            state['size'] = os.stat(state['path']).st_size
+            File.create(state['filename'], state['key'], state['file_type'], state['size'], self.storage.id)
         except Exception as e:
-            logging.error('Error saving file {}'.format(str(e)))
+            state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
+            state['success'] = False
+            state['message'] = 'Error saving file to server: {}'.format(str(e))
 
-            abort(500, message='Error saving file')
+        if not state['success']:
+            logging.error('Error saving file, data: {}'.format(state))
+            abort(500, message=state['message'])
 
-        logging.info('File saved to {}'.format(path))
+        logging.info('File saved, data: {}'.format(state))
+
+        data = {'message': state['message'],  'file': { 'filename': state['filename'], 'key': state['key'], 'size':state['size'], 'type': state['file_type'] }}
         
-        return Response.ok('success',{ 'filename': filename, 'key': key, 'size':size, 'type': file.mimetype })
+        return data
 
     # Get all files object from current api key
-    def get(self, api_internal_key, **kwargs):
-        new_kwargs = clear_none_in_dict(**kwargs)
-        files = map(lambda f: f.dict(), File.filter(storage_key = api_internal_key, **new_kwargs))
+    def get_files(self, name, type, key):
+        files = File.query.filter_by(storage_id = self.storage.id)
 
-        return Response.ok('Your files',list(files))
+        logging.info(files)
 
-    # Get file
-    def get_file(self, file_key):
-        file = File.get(key=file_key)
+        if name:
+            files = files.filter_by(name=name)
+        if type:
+            files = files.filter_by(type=type)
+        if key:
+            files = files.filter_by(key=key)
+
+        files_json = list(map(lambda f: f.json(), files))
+
+        data = { 'message': 'Files', 'files': files_json}
+
+        return data
+
+    def download(self, key):
+        file = File.query.filter_by(key=key).first()
 
         if file is None:
             abort(404, message='File not found')
+
+        data = {'path':self.generate_path(file.type) + key +'.' + file.name.split('.')[-1]}
+
+        return data
         
-        return send_file(path_or_file=(self.generate_path(file.type) + file_key))
 
     def generate_path(self, dir:str):
         current_directory = os.getcwd() + self.dir
@@ -94,11 +135,5 @@ class LocalStorageService(StorageService):
         return current_directory + dir + '/'
 
     def is_file_type_supported(self, file_type, allowed_file_types):
-        return allowed_file_types and file_type not in allowed_file_types
+        return file_type in allowed_file_types
 
-class S3StorageService(StorageService):
-    def __init__(self,storage):
-        pass
-
-    def store(self, file, api_internal_key):
-        pass

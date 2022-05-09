@@ -15,6 +15,7 @@ class ServiceResource(BaseResource):
     def get(self):
         self.parser.add_argument('name',type=str,location='args',required=False)
         args = self.parser.parse_args(strict=True)
+
         data = self.api_service.get_services(auth.current_user(), name=args['name'])
 
         return Response.ok(data=data)

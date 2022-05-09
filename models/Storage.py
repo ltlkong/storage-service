@@ -103,6 +103,7 @@ class Storage(Model):
 
     def json(self):
         return {
+            'id': self.id,
             'enabled_file_types': self.get_enabled_file_types(),
             'name': self.name,
             'status':self.status,

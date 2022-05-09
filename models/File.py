@@ -6,6 +6,7 @@ import logging
 class File(Model):
     __tablename__ = 'file'
     id = db.Column(db.BigInteger(), primary_key=True)
+
     name = db.Column(db.String(100), nullable=False)
     key = db.Column(db.String(300), nullable=False, unique=True)
     type= db.Column(db.String(100), nullable=False)
@@ -19,37 +20,26 @@ class File(Model):
     storage = db.relationship('Storage',
         backref=db.backref('file', lazy=True))
 
-    @staticmethod
-    def get(**kwargs):
-        files = File.filter(**kwargs).first()
-
-        return files
-
-    @staticmethod
-    def filter(**kwargs):
-        files = db.session.query(File).filter_by(**kwargs)
-
-        return files
 
         
     @staticmethod
-    def create( name, key, type, size, storage_key):
-        file=File(name=name, key=key, type=type, size=size, storage_key=storage_key)
+    def create( name, key, type, size, storage_id):
+        file=File(name=name, key=key, type=type, size=size, storage_id=storage_id)
 
         try:
             db.session.add(file)
             db.session.commit()
         except Exception as e:
-            logging.error("Error {}".format(str(e)))
             db.session.rollback()
 
-            return False
+            raise e
 
-        return True
+        return file
 
-    def dict(self):
+    def json(self):
         return {
             'name': self.name,
             'key': self.key,
-            'type': self.type
+            'type': self.type,
+            'size': self.size
         }
