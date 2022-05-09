@@ -1,8 +1,7 @@
 from werkzeug.datastructures import FileStorage
 from common.auth import ServiceAuth
 from resources.BaseResource import BaseResource
-from services.StorageService import StorageService
-from services.FileService import FileService, create_file_service
+from services.FileService import  create_file_service
 from resources.BaseResource import BaseResource
 from common.response import Response
 
@@ -37,13 +36,10 @@ class FileResource(BaseResource):
 
         return Response.ok(data['message'], data = data['file'])
 
-class FetchFileResource(BaseResource):
+class FileOperationResource(BaseResource):
     # Download file
-    def get(self, file_key):
-        self.parser.add_argument('storage_id',type=int,location='args', required=True, help='Storage id is required')
-        args = self.parser.parse_args()
-
-        file_service = create_file_service(args['storage_id'])
+    def get(self,storage_id, file_key):
+        file_service = create_file_service(storage_id)
 
         data = file_service.download(file_key)
 
