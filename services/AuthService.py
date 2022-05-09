@@ -13,6 +13,7 @@ class AuthService:
             'success':True,
             'http_status': HTTPStatus.CREATED,
             'message' : None,
+            'email': email
         }
 
         if not self.verify_email(email):
@@ -41,7 +42,7 @@ class AuthService:
 
         state['message'] = 'Registration success'
             
-        logging.info('User registered {}, data: {}'.format(email, state))
+        logging.info('User registered, data: {}'.format(state))
 
         data = { 'message': state['message']}
 

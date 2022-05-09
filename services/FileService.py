@@ -93,8 +93,6 @@ class LocalFileService(FileService):
     def get_files(self, name, type, key):
         files = File.query.filter_by(storage_id = self.storage.id)
 
-        logging.info(files)
-
         if name:
             files = files.filter_by(name=name)
         if type:
@@ -122,8 +120,6 @@ class LocalFileService(FileService):
     def generate_path(self, dir:str):
         current_directory = os.getcwd() + self.dir
         final_directory = os.path.join(current_directory, r"" + dir)
-
-        logging.info(current_directory + dir)
 
         if not os.path.exists(final_directory):
            os.makedirs(final_directory)

@@ -40,5 +40,7 @@ class File(Model):
             'name': self.name,
             'key': self.key,
             'type': self.type,
-            'size': self.size
+            'size': self.size,
+            'storage_id': self.storage_id,
+            'url': '/storage/{}/file/{}'.format(self.storage_id, self.key)
         }
