@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from flask import current_app, send_file
+from flask import  send_file
 
 class Response:
     @staticmethod

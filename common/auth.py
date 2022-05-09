@@ -1,6 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
 from flask_restful import reqparse, abort
-from hashlib import md5
 from functools import wraps
 from flask import  current_app
 import jwt

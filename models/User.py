@@ -2,8 +2,6 @@ from datetime import datetime, timedelta
 from common.core import Model, db, encrypt_md5
 from datetime import datetime, timedelta
 from uuid import uuid4
-import logging
-from models.Service import Service
 
 class UserStatus:
     ACTIVE = 'active'

@@ -1,7 +1,6 @@
 from datetime import datetime
 from common.core import db, Model
 from datetime import datetime
-import logging
 
 class File(Model):
     __tablename__ = 'file'

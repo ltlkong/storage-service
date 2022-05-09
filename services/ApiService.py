@@ -1,8 +1,6 @@
 import logging
-from common.response import Response
 from flask_restful import abort
 from http import HTTPStatus
-from models.User import User
 from models.Service import Service
 
 class ApiService:

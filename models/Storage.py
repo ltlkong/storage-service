@@ -1,9 +1,7 @@
 from datetime import datetime
 from common.core import Model, db
 from datetime import datetime
-
 from models.Service import Service
-import logging
 
 class StorageType:
     AMAZONS3 = 'amazon s3'

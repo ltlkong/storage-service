@@ -2,7 +2,6 @@ from datetime import datetime
 from common.core import Model, db, encrypt_md5
 from datetime import datetime
 from uuid import uuid4
-import logging
 
 class Service(Model):
     __tablename__='service'

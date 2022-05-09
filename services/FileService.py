@@ -1,15 +1,11 @@
-from typing import Dict
 from werkzeug.datastructures import FileStorage
-from common.response import  Response
 import logging
-from flask import current_app, send_file
+from flask import current_app
 import os
 from uuid import uuid4
 from models.File import File
-from models.Storage import Storage, StorageType
-import mimetypes
+from models.Storage import Storage
 from flask_restful import abort
-from utils.clear_none_in_dict import clear_none_in_dict
 from http import HTTPStatus
 
 # Abstract

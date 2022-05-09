@@ -1,7 +1,4 @@
 import logging
-from uuid import uuid4
-from common.response import  Response
-from models.Storage import Storage
 from models.User import User
 from common.core import encrypt_md5, generate_token
 from flask_restful import abort
