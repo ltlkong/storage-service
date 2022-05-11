@@ -54,3 +54,8 @@ class UserResource(BaseResource):
     # Check if user exists
     def get(self, email):
         pass
+
+    # Handle request
+    def post(self):
+        # Deactivate user
+        pass

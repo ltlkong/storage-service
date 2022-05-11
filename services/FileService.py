@@ -10,13 +10,13 @@ from http import HTTPStatus
 
 # Abstract
 class FileService:
-    def upload(self, file:FileStorage) :
+    def upload(self, file:FileStorage, previous_file_key= None) :
         pass
 
     def download(self, file_key):
         pass
 
-    def get_files(self, name=None, type=None, key=None):
+    def get(self, name=None, type=None, key=None):
         pass
 
 # Factory
@@ -40,7 +40,7 @@ class LocalFileService(FileService):
         self.storage = storage
 
     # Store a file to the storage dir
-    def upload(self, file:FileStorage):
+    def upload(self, file:FileStorage, previous_file_key = None):
         state = {
             'http_status': HTTPStatus.CREATED,
             'success': True,
@@ -73,7 +73,7 @@ class LocalFileService(FileService):
         try:
             file.save(state['path'])
             state['size'] = os.stat(state['path']).st_size
-            File.create(state['filename'], state['key'], state['file_type'], state['size'], self.storage.id)
+            File.create(state['filename'], state['key'], state['file_type'], state['size'], self.storage.id,previous_file_key)
         except Exception as e:
             state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
             state['success'] = False
@@ -90,7 +90,7 @@ class LocalFileService(FileService):
         return data
 
     # Get all files object from current api key
-    def get_files(self, name, type, key):
+    def get(self, name, type, key):
         files = File.query.filter_by(storage_id = self.storage.id)
 
         if name:

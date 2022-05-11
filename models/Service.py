@@ -38,5 +38,23 @@ class Service(Model):
 
         return service
 
+    def update(self, name, description):
+        if name:
+            self.name = name
+        if description:
+            self.description = description
+
+        if name or description:
+            self.updated_at = datetime.now()
+
+        try: 
+            db.session.commit()
+        except Exception as e:
+            db.session.rollback()
+
+            return False
+
+        return True
+
     def json(self):
         return { 'key': self.key, 'name': self.name, 'description': self.description}

@@ -10,7 +10,7 @@ class File(Model):
     key = db.Column(db.String(300), nullable=False, unique=True)
     type= db.Column(db.String(100), nullable=False)
     size = db.Column(db.BigInteger(), nullable=False)
-    previous_version=db.Column(db.BigInteger(), nullable=True)
+    previous_version=db.Column(db.String(300), nullable=True)
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
@@ -22,8 +22,11 @@ class File(Model):
 
         
     @staticmethod
-    def create( name, key, type, size, storage_id):
+    def create( name, key, type, size, storage_id, previous_file_key = None):
         file=File(name=name, key=key, type=type, size=size, storage_id=storage_id)
+
+        if previous_file_key:
+            file.previous_version = previous_file_key
 
         try:
             db.session.add(file)

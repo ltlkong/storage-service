@@ -19,20 +19,21 @@ class FileResource(BaseResource):
 
         file_service = create_file_service(args['storage_id'], auth.current_service())
 
-        data = file_service.get_files(name=args['name'], type=args['type'], key=args['file_key'])
+        data = file_service.get(name=args['name'], type=args['type'], key=args['file_key'])
 
         return Response.ok(data['message'], data = data['files'])
 
     # Upload file
     @auth.verify_key
     def post(self):
-        self.parser.add_argument('storage_id',type=int,location='args', required=True, help='Storage id is required')
+        self.parser.add_argument('storage_id',type=int,location='json', required=True, help='Storage id is required')
+        self.parser.add_argument('previous_file_key',type=int,location='json')
         self.parser.add_argument('file',type=FileStorage,location='files', required=True, help='File is required')
         args = self.parser.parse_args()
 
         file_service = create_file_service(args['storage_id'], auth.current_service())
 
-        data = file_service.upload(args['file'])
+        data = file_service.upload(args['file'], args['previous_file_key'])
 
         return Response.ok(data['message'], data = data['file'])
 

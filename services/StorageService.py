@@ -12,7 +12,6 @@ class StorageService:
             'http_status': HTTPStatus.CREATED,
             'success': True,
             'message': 'Storage created',
-            'service_key': None
         }
 
         storage = None
@@ -33,8 +32,6 @@ class StorageService:
         data = { 'message': state['message'], 'storage':  storage.json() if storage else None }
 
         return data
-    def update(self):
-        pass
     def get(self, service, name = None, type = None):
         storages = Storage.query.filter_by(service_id = service.id)
 
@@ -47,5 +44,10 @@ class StorageService:
 
         return data
 
-    def deactive(self):
-        pass
+    # TODO: update
+    def update(self, user, name, type, enabled_file_types):
+        return { 'message': 'updated'}
+
+    # TODO: deactive
+    def deactive(self, user, storage_id):
+        return { 'message': 'delete'}
