@@ -26,8 +26,8 @@ class FileResource(BaseResource):
     # Upload file
     @auth.verify_key
     def post(self):
-        self.parser.add_argument('storage_id',type=int,location='json', required=True, help='Storage id is required')
-        self.parser.add_argument('previous_file_key',type=int,location='json')
+        self.parser.add_argument('storage_id',type=int,location='args', required=True, help='Storage id is required')
+        self.parser.add_argument('previous_file_key',type=int,location='args')
         self.parser.add_argument('file',type=FileStorage,location='files', required=True, help='File is required')
         args = self.parser.parse_args()
 
