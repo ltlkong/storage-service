@@ -45,5 +45,6 @@ class File(Model):
             'type': self.type,
             'size': self.size,
             'storage_id': self.storage_id,
-            'url': '/storage/{}/file/{}'.format(self.storage_id, self.key)
+            'url': '/storage/{}/file/{}'.format(self.storage_id, self.key),
+            'previous_file_key': self.previous_file_key
         }
