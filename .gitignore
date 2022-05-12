@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 
+
 # C extensions
 *.so
 
@@ -50,7 +51,8 @@ coverage.xml
 docs/_build/
 
 # Database
-data/
+db/
+
 
 # Code counter
 .VSCodeCounter/

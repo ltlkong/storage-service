@@ -63,6 +63,6 @@ def init_router(api: Api):
     api.add_resource(ServiceResource, '/service', '/service/<service_key>')
     api.add_resource(StorageResource, '/storage')
     api.add_resource(FileResource, '/file')
-    api.add_resource(FileOperationResource, '/storage/<storage_id>/file/<file_key>')
+    api.add_resource(FileOperationResource, '/file/<storage_id>/<file_key>')
 
     
