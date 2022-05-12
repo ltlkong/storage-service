@@ -7,6 +7,7 @@ class File(Model):
     id = db.Column(db.BigInteger(), primary_key=True)
 
     name = db.Column(db.String(100), nullable=False)
+    file_name = db.Column(db.String(300), nullable=False)
     key = db.Column(db.String(300), nullable=False, unique=True)
     type= db.Column(db.String(100), nullable=False)
     size = db.Column(db.BigInteger(), nullable=False)
@@ -22,11 +23,20 @@ class File(Model):
 
         
     @staticmethod
-    def create( name, key, type, size, storage_id, previous_file_key = None):
-        file=File(name=name, key=key, type=type, size=size, storage_id=storage_id)
+    def create( file_name, key, type, size, storage_id, previous_file_key, name):
+        file=File(file_name=file_name, key=key, type=type, size=size, storage_id=storage_id)
 
         if previous_file_key:
-            file.previous_version = previous_file_key
+            previous_file = File.query.filter_by(previous_version = previous_file_key).first()
+
+            if not previous_file:
+                raise Exception('Previous version not found')
+
+            file.previous_version = previous_file.json()['url']
+        if name:
+            file.name = name
+        else:
+            file.name = file_name.split('.')[0]
 
         try:
             db.session.add(file)
@@ -41,10 +51,11 @@ class File(Model):
     def json(self):
         return {
             'name': self.name,
+            'file_name': self.file_name,
             'key': self.key,
             'type': self.type,
             'size': self.size,
             'storage_id': self.storage_id,
             'url': '/storage/{}/file/{}'.format(self.storage_id, self.key),
-            'previous_file_key': self.previous_file_key
+            'previous_version_url': self.previous_version
         }

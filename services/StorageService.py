@@ -38,14 +38,14 @@ class StorageService:
         if name:
             storages = storages.filter_by(name = name)
         if type:
-            storage = storages.filter_by(type = type)
+            storages = storages.filter_by(type = type)
 
         data = { "message": "Storages", "storages": list(map(lambda s: s.json(), storages)) }
 
         return data
 
     # TODO: update
-    def update(self, user, name, type, enabled_file_types):
+    def update(self, user, name):
         return { 'message': 'updated'}
 
     # TODO: deactive

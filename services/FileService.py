@@ -10,7 +10,7 @@ from http import HTTPStatus
 
 # Abstract
 class FileService:
-    def upload(self, file:FileStorage, previous_file_key= None) :
+    def upload(self, file:FileStorage, previous_file_key= None, name=None) :
         pass
 
     def download(self, file_key):
@@ -40,7 +40,7 @@ class LocalFileService(FileService):
         self.storage = storage
 
     # Store a file to the storage dir
-    def upload(self, file:FileStorage, previous_file_key = None):
+    def upload(self, file:FileStorage, previous_file_key = None, name=None):
         state = {
             'http_status': HTTPStatus.CREATED,
             'success': True,
@@ -69,11 +69,12 @@ class LocalFileService(FileService):
         state['filename'] = file.filename or 'unknown'
         state['key'] = str(uuid4()) 
         state['path'] = self.generate_path(state['file_type']) + state['key'] +'.' + state['filename'].split('.')[-1]
+        file_json = None
 
         try:
             file.save(state['path'])
             state['size'] = os.stat(state['path']).st_size
-            File.create(state['filename'], state['key'], state['file_type'], state['size'], self.storage.id,previous_file_key)
+            file_json = File.create(state['filename'], state['key'], state['file_type'], state['size'], self.storage.id, previous_file_key, name).json()
         except Exception as e:
             state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
             state['success'] = False
@@ -85,7 +86,7 @@ class LocalFileService(FileService):
 
         logging.info('File saved, data: {}'.format(state))
 
-        data = {'message': state['message'],  'file': { 'filename': state['filename'], 'key': state['key'], 'size':state['size'], 'type': state['file_type'] }}
+        data = {'message': state['message'],  'file': file_json}
         
         return data
 
@@ -112,7 +113,7 @@ class LocalFileService(FileService):
         if file is None:
             abort(404, message='File not found')
 
-        data = {'path':self.generate_path(file.type) + key +'.' + file.name.split('.')[-1]}
+        data = {'path':self.generate_path(file.type) + key +'.' + file.file_name.split('.')[-1]}
 
         return data
         

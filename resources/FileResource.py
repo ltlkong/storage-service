@@ -27,13 +27,14 @@ class FileResource(BaseResource):
     @auth.verify_key
     def post(self):
         self.parser.add_argument('storage_id',type=int,location='args', required=True, help='Storage id is required')
-        self.parser.add_argument('previous_file_key',type=int,location='args')
+        self.parser.add_argument('previous_file_key',type=str,location='form')
+        self.parser.add_argument('name',type=str,location='form')
         self.parser.add_argument('file',type=FileStorage,location='files', required=True, help='File is required')
         args = self.parser.parse_args()
 
         file_service = create_file_service(args['storage_id'], auth.current_service())
 
-        data = file_service.upload(args['file'], args['previous_file_key'])
+        data = file_service.upload(args['file'], args['previous_file_key'],args['name'])
 
         return Response.ok(data['message'], data = data['file'])
 

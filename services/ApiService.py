@@ -45,7 +45,7 @@ class ApiService:
 
         return list(map(lambda s: s.json(), services))
 
-    def update(self,service_id, name, description):
+    def update(self,key, name, description):
         state = {
             'http_status': HTTPStatus.OK,
             'success': True,
@@ -53,7 +53,7 @@ class ApiService:
             'service_id': None
         }
 
-        service = Service.query.filter_by(service_id=service_id, user_id=self.user.id).first()
+        service = Service.query.filter_by(key=key, user_id=self.user.id).first()
 
         state['service_id'] = service.id
 

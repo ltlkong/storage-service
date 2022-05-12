@@ -37,13 +37,13 @@ class ServiceResource(BaseResource):
         return Response.created(data['message'], data['service'])
 
     @auth.verify_token
-    def put(self, service_id):
+    def put(self, service_key):
         self.parser.add_argument('name',type=str,location='json',required=False)
         self.parser.add_argument('description',type=str,location='json',required=False)
         args = self.parser.parse_args()
 
         self.api_service.set_user(auth.current_user())
 
-        data = self.api_service.update(service_id=service_id, name=args['name'], description=args['description'])
+        data = self.api_service.update(key=service_key, name=args['name'], description=args['description'])
 
         return Response.ok(data['message'])

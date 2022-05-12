@@ -60,7 +60,7 @@ def create_api(app: Flask) -> Api:
 def init_router(api: Api):
     api.add_resource(LoginResource, '/login/<type>')
     api.add_resource(RegisterResource, '/register')
-    api.add_resource(ServiceResource, '/service', '/service/<service_id>')
+    api.add_resource(ServiceResource, '/service', '/service/<service_key>')
     api.add_resource(StorageResource, '/storage')
     api.add_resource(FileResource, '/file')
     api.add_resource(FileOperationResource, '/storage/<storage_id>/file/<file_key>')

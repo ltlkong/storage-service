@@ -37,11 +37,9 @@ class StorageResource(BaseResource):
     @auth.verify_key
     def put(self):
         self.parser.add_argument('name',type=str, required=False, location='json')
-        self.parser.add_argument('type',type=str, required=True, location='json', help='Please provide a type of storage')
-        self.parser.add_argument('enabled_file_types',type=str, action='append', required=False)
         args = self.parser.parse_args()
 
-        data = self.storage_service.update(auth.current_service(), name=args['name'], type=args['type'], enabled_file_types=args['enabled_file_types'])
+        data = self.storage_service.update(auth.current_service(), name=args['name'])
 
         return Response.ok(data['message'])
 
