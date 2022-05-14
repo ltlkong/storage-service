@@ -35,11 +35,11 @@ class StorageResource(BaseResource):
         return Response.created(data['message'], data=data['storage'])
 
     @auth.verify_key
-    def put(self):
+    def put(self, storage_id):
         self.parser.add_argument('name',type=str, required=False, location='json')
         args = self.parser.parse_args()
 
-        data = self.storage_service.update(auth.current_service(), name=args['name'])
+        data = self.storage_service.update(auth.current_service(),storage_id, name=args['name'])
 
         return Response.ok(data['message'])
 

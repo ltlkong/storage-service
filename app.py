@@ -19,4 +19,4 @@ if __name__ == "__main__":
     logging.info("Starting server")
     if app.config['ENVIRONMENT'] == 'dev':
         app.run(host='0.0.0.0',port=app.config['PORT'])
-    waitress.serve(app,host='0.0.0.0',port=app.config['PORT'], max_request_body_size=99999999,threads=6)
+    waitress.serve(app,host='0.0.0.0',port=app.config['PORT'], max_request_body_size=10000000000,threads=6)

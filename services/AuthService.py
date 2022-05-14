@@ -56,7 +56,8 @@ class AuthService:
             'success': True,
             'http_status': HTTPStatus.OK,
             'message':None,
-            'token' : None
+            'token' : None,
+            'remember_token': None
         }
 
         user = User.query.filter_by(email=email, password=state['password']).first()
@@ -76,7 +77,8 @@ class AuthService:
 
         state['token'] = token
         user.update(update_login=True, update_remember_token=remember)
-        state['remember_token'] = user.get_remember_token()
+        if remember:
+            state['remember_token'] = user.get_remember_token()
 
         logging.info('User logged in, data: {}'.format(state))
 

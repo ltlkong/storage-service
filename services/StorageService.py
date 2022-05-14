@@ -33,7 +33,7 @@ class StorageService:
 
         return data
     def get(self, service, name = None, type = None):
-        storages = Storage.query.filter_by(service_id = service.id)
+        storages = Storage.query.filter_by(service_id = service.id, status='active')
 
         if name:
             storages = storages.filter_by(name = name)
@@ -44,10 +44,50 @@ class StorageService:
 
         return data
 
-    # TODO: update
-    def update(self, user, name):
-        return { 'message': 'updated'}
+    def update(self, service, storage_id, name):
+        state = {
+            'http_status': HTTPStatus.OK,
+            'success': True,
+            'message': 'Service updated',
+            'service_id': None
+        }
 
-    # TODO: deactive
-    def deactive(self, user, storage_id):
-        return { 'message': 'delete'}
+        storage = Storage.query.filter_by(id=storage_id, service_id=service.id).first()
+
+        if storage is None:
+            state['success'] = False
+            state['http_status'] = HTTPStatus.NOT_FOUND
+            state['message'] = 'Service not found'
+        if not storage.update(name):
+            state['success'] = False
+            state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
+
+        if not state['success']:
+            logging.error('Error updating service, data:{}'.format(state))
+            abort(state['http_status'], message=state['message'])
+
+        return {'message': 'Updated' }
+
+    def deactive(self, service, storage_id):
+        state = {
+            'http_status': HTTPStatus.OK,
+            'success': True,
+            'message': 'Service updated',
+            'service_id': None
+        }
+
+        storage = Storage.query.filter_by(id=storage_id, service_id=service.id).first()
+
+        if storage is None:
+            state['success'] = False
+            state['http_status'] = HTTPStatus.NOT_FOUND
+            state['message'] = 'Service not found'
+        if not storage.update(status='deactive'):
+            state['success'] = False
+            state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
+
+        if not state['success']:
+            logging.error('Error updating service, data:{}'.format(state))
+            abort(state['http_status'], message=state['message'])
+
+        return {'message': 'Deleted' }

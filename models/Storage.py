@@ -83,11 +83,11 @@ class Storage(Model):
 
         return storage
 
-    def update(self, service_id=None, name=None):
+    def update(self, name=None, status=None):
         if name:
             self.name = name
-        if service_id:
-            self.service_id = service_id
+        if status:
+            self.status = status
 
         self.updated_at=datetime.now()
 

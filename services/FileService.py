@@ -19,9 +19,12 @@ class FileService:
     def get(self, name=None, type=None, key=None):
         pass
 
+    def remove(self, file_key):
+        pass
+
 # Factory
 def create_file_service(storage_id, service=None):
-    storage = Storage.query.filter_by(id = storage_id)
+    storage = Storage.query.filter_by(id = storage_id,status='active')
 
     if service:
         storage =  storage.filter_by(service_id = service.id)
