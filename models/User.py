@@ -72,3 +72,12 @@ class User(Model):
             raise e
 
         return True
+
+    def json(self):
+
+        return {
+            'email':self.email
+        }
+
+
+

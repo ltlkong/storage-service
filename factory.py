@@ -9,6 +9,7 @@ from resources.ServiceResource import ServiceResource
 import os
 from resources.StorageResource import StorageResource
 from resources.FileResource import FileOperationResource, FileResource, FileOperationPublicResource
+from resources.UserResource import UserResource
 
 def create_app(config_type): 
     app = Flask(__name__)
@@ -65,5 +66,6 @@ def init_router(api: Api):
     api.add_resource(FileResource, '/file')
     api.add_resource(FileOperationResource, '/file/<file_key>')
     api.add_resource(FileOperationPublicResource, '/public/file/<file_key>')
+    api.add_resource(UserResource, '/user')
 
     

@@ -4,7 +4,6 @@ from resources.BaseResource import BaseResource
 from flask_restful import abort
 from http import HTTPStatus
 from common.response import Response
-import logging
 
 auth = Auth()
 
@@ -55,12 +54,3 @@ class RegisterResource(BaseAuthResource):
 
         return Response.created(data['message'])
 
-class UserResource(BaseResource):
-    # Check if user exists
-    def get(self, email):
-        pass
-
-    # Handle request
-    def post(self):
-        # Deactivate user
-        pass

@@ -6,6 +6,7 @@ from http import HTTPStatus
 from datetime import datetime
 import re
 from operator import and_
+from common.core import BasicStatus
 
 class AuthService:
     def register(self, email:str, password:str):
@@ -101,12 +102,12 @@ class AuthService:
             'token' : None
         }
 
-        user = User.query.filter(and_(User.remember_token == remember_token, User.remember_token_expires_at > datetime.now())).first()
+        user = User.query.filter(and_(User.remember_token == remember_token, User.remember_token_expires_at > datetime.now())).filter_by(status=BasicStatus.ACTIVE).first()
 
         if not user: 
             state['success'] = False
             state['message'] = 'Invalid token'
-            state['http_status'] = HTTPStatus.BAD_REQUEST
+            state['http_status'] = HTTPStatus.NOT_FOUND
 
         if not state['success']:
             logging.error('User logging failed, data: {}'.format(state))
