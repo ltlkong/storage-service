@@ -1,5 +1,5 @@
 from datetime import datetime
-from common.core import Model, db
+from common.core import Model, db, BasicStatus
 from datetime import datetime
 from models.Service import Service
 
@@ -26,7 +26,7 @@ class Storage(Model):
 
     enabled_file_types = db.Column(db.Text, nullable=True)
     type = db.Column(db.String(50), nullable=False, default=StorageType.SERVER)
-    status=db.Column(db.String(50), nullable=False, default='active')
+    status=db.Column(db.String(50), nullable=False, default=BasicStatus.ACTIVE)
     third_party_key = db.Column(db.String(800), nullable=True)
 
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
@@ -83,9 +83,11 @@ class Storage(Model):
 
         return storage
 
-    def update(self, name=None, status=None):
+    def update(self, name=None,third_party_key=None, status=None):
         if name:
             self.name = name
+        if third_party_key and self.type != StorageType.SERVER:
+            self.third_party_key = third_party_key
         if status:
             self.status = status
 

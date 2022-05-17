@@ -25,3 +25,6 @@ def generate_token(data, exp_hours=None):
 
     return token
 
+class BasicStatus:
+    ACTIVE = 'active'
+    DISABLED = 'disabled'

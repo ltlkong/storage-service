@@ -1,13 +1,11 @@
 import logging 
-from common.response import Response 
+from common.core import BasicStatus
 from flask_restful import abort
 from http import HTTPStatus
-from models.User import User
-from models.Service import Service
 from models.Storage import Storage
 
 class StorageService:
-    def create(self, service, name, type, enabled_file_types):
+    def create(self, service, name, type, enabled_file_types, third_party_key):
         state = {
             'http_status': HTTPStatus.CREATED,
             'success': True,
@@ -17,7 +15,7 @@ class StorageService:
         storage = None
 
         try:
-            storage = Storage.create(service=service, name=name, type=type, enabled_file_types=enabled_file_types)
+            storage = Storage.create(service=service, name=name, type=type, enabled_file_types=enabled_file_types, third_party_key=third_party_key)
         except Exception as e:
             state['http_status'] = HTTPStatus.BAD_REQUEST
             state['success'] = False
@@ -33,7 +31,7 @@ class StorageService:
 
         return data
     def get(self, service, name = None, type = None):
-        storages = Storage.query.filter_by(service_id = service.id, status='active')
+        storages = Storage.query.filter_by(service_id = service.id, status=BasicStatus.ACTIVE)
 
         if name:
             storages = storages.filter_by(name = name)
@@ -44,7 +42,7 @@ class StorageService:
 
         return data
 
-    def update(self, service, storage_id, name):
+    def update(self, service, storage_id, name, third_party_key):
         state = {
             'http_status': HTTPStatus.OK,
             'success': True,
@@ -58,7 +56,7 @@ class StorageService:
             state['success'] = False
             state['http_status'] = HTTPStatus.NOT_FOUND
             state['message'] = 'Service not found'
-        if not storage.update(name):
+        if not storage.update(name, third_party_key):
             state['success'] = False
             state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
 
@@ -82,7 +80,7 @@ class StorageService:
             state['success'] = False
             state['http_status'] = HTTPStatus.NOT_FOUND
             state['message'] = 'Service not found'
-        if not storage.update(status='deactive'):
+        if not storage.update(status=BasicStatus.DISABLED):
             state['success'] = False
             state['http_status'] = HTTPStatus.INTERNAL_SERVER_ERROR
 

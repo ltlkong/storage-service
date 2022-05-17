@@ -1,7 +1,7 @@
 from werkzeug.datastructures import FileStorage
 from common.auth import ServiceAuth
 from resources.BaseResource import BaseResource
-from services.FileService import  create_file_service
+from services.FileService import  create_file_service, FileService
 from resources.BaseResource import BaseResource
 from common.response import Response
 
@@ -14,12 +14,12 @@ class FileResource(BaseResource):
         self.parser.add_argument('storage_id',type=int,location='args', required=True, help='Storage id is required')
         self.parser.add_argument('name',type=str,location='args')
         self.parser.add_argument('type',type=str,location='args')
-        self.parser.add_argument('file_key',type=str,location='args')
+        self.parser.add_argument('public_key',type=str,location='args')
         args = self.parser.parse_args()
 
         file_service = create_file_service(args['storage_id'], auth.current_service())
 
-        data = file_service.get(name=args['name'], type=args['type'], key=args['file_key'])
+        data = file_service.get(name=args['name'], type=args['type'], public_key=args['public_key'])
 
         return Response.ok(data['message'], data = data['files'])
 
@@ -38,11 +38,17 @@ class FileResource(BaseResource):
 
         return Response.ok(data['message'], data = data['file'])
 
+class FileOperationPublicResource(BaseResource):
+    # Download file
+    def get(self,file_key):
+        data = FileService.download(public_key=file_key)
+
+        return Response.file(data['path'])
+
 class FileOperationResource(BaseResource):
     # Download file
-    def get(self,storage_id, file_key):
-        file_service = create_file_service(storage_id)
-
-        data = file_service.download(file_key)
+    @auth.verify_key
+    def get(self,file_key):
+        data = FileService.download(internal_key=file_key)
 
         return Response.file(data['path'])

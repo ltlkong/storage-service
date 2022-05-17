@@ -4,6 +4,7 @@ from resources.BaseResource import BaseResource
 from flask_restful import abort
 from http import HTTPStatus
 from common.response import Response
+import logging
 
 auth = Auth()
 
@@ -12,12 +13,16 @@ class BaseAuthResource(BaseResource):
         super().__init__()
         self.auth_service = AuthService()
 
+class LoginType:
+    ACCOUNT = 'account'
+    REMEMBER_TOKEN = 'remember_token'
+
 class LoginResource(BaseAuthResource):
     # Login
     def post(self, type):
         data = None
 
-        if type == 'account':
+        if type == LoginType.ACCOUNT:
             self.parser.add_argument('email',type=str,location='json',required=True, help='Email is required')
             self.parser.add_argument('password',type=str,location='json',required=True, help='Password is required')
             self.parser.add_argument('remember',type=bool,location='json')
@@ -25,7 +30,7 @@ class LoginResource(BaseAuthResource):
 
             data = self.auth_service.loginWithAccount(args['email'],args['password'], args['remember'])
 
-        elif type == 'token':
+        elif type == LoginType.REMEMBER_TOKEN:
             self.parser.add_argument('token',type=str,location='json',required=True, help='Token is required')
             args = self.parser.parse_args(strict=True)
 
