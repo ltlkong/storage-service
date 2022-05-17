@@ -1,11 +1,12 @@
 from werkzeug.datastructures import FileStorage
-from common.auth import ServiceAuth
+from common.auth import ServiceAuth, Auth
 from resources.BaseResource import BaseResource
 from services.FileService import  create_file_service, FileService
 from resources.BaseResource import BaseResource
 from common.response import Response
 
 auth=ServiceAuth()
+auth_account=Auth()
 
 class FileResource(BaseResource):
     # Get files data
@@ -19,7 +20,7 @@ class FileResource(BaseResource):
 
         file_service = create_file_service(args['storage_id'], auth.current_service())
 
-        data = file_service.get(name=args['name'], type=args['type'], public_key=args['public_key'])
+        data = file_service.get(name=args['name'], type=args['type'], public_key=args['public_key'], with_internal_key=True)
 
         return Response.ok(data['message'], data = data['files'])
 
@@ -47,7 +48,7 @@ class FileOperationPublicResource(BaseResource):
 
 class FileOperationResource(BaseResource):
     # Download file
-    @auth.verify_key
+    @auth_account.verify_token
     def get(self,file_key):
         data = FileService.download(internal_key=file_key)
 

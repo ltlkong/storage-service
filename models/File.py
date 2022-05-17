@@ -12,7 +12,6 @@ class File(Model):
     key = db.Column(db.String(300), nullable=False)
     type= db.Column(db.String(100), nullable=False)
     size = db.Column(db.BigInteger(), nullable=False)
-    previous_version=db.Column(db.BigInteger(), nullable=True)
     public_key = db.Column(db.String(100), nullable=False)
 
     status = db.Column(db.String(100), nullable=False, default=BasicStatus.ACTIVE)
@@ -24,6 +23,8 @@ class File(Model):
     storage = db.relationship('Storage',
         backref=db.backref('files', lazy=True))
 
+    previous_file_id=db.Column(db.BigInteger(), db.ForeignKey('file.id'), nullable=True)
+    previous_file = db.relationship('File', remote_side=id)
 
         
     @staticmethod
@@ -39,7 +40,7 @@ class File(Model):
             previous_file.status =BasicStatus.DISABLED
 
             file.public_key = previous_file.public_key
-            file.previous_version = previous_file.id
+            file.previous_file_id = previous_file.id
         if name:
             file.name = name
         else:
@@ -55,14 +56,18 @@ class File(Model):
 
         return file
 
-    def json(self):
-        return {
+    def json(self, with_internal_key = False):
+        file_json = {
             'name': self.name,
             'file_name': self.file_name,
             'public_key': self.public_key,
-            'internal_key': self.key,
             'type': self.type,
             'size': self.size,
             'storage_id': self.storage_id,
             'status': self.status
         }
+
+        if with_internal_key:
+            file_json['internal_key'] = self.key
+
+        return file_json

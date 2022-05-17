@@ -125,7 +125,7 @@ class LocalFileService(FileService):
         return data
 
     # Get all files object from current api key
-    def get(self, name, type, public_key):
+    def get(self, name, type, public_key, with_internal_key=False):
         files = File.query.filter_by(storage_id = self.storage.id)
 
         if name:
@@ -135,7 +135,7 @@ class LocalFileService(FileService):
         if public_key:
             files = files.filter_by(public_key=public_key).order_by(desc(File.created_at))
 
-        files_json = list(map(lambda f: f.json(), files))
+        files_json = list(map(lambda f: f.json(with_internal_key), files))
 
         data = { 'message': 'Files', 'files': files_json}
 
