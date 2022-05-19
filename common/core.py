@@ -2,6 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from hashlib import md5
 from flask import  current_app
 import jwt
+from datetime import datetime, timedelta
 
 db = SQLAlchemy()
 
@@ -19,7 +20,7 @@ def generate_token(data, exp_hours=None):
     }
 
     if exp_hours:
-        jwt_data['exp_hours'] = exp_hours
+        jwt_data['exp'] = datetime.now() + timedelta(hours=exp_hours)
 
     token = jwt.encode(jwt_data, current_app.config['SECRET_KEY'],algorithm='HS256')
 

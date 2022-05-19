@@ -31,6 +31,11 @@ class File(Model):
     def create( file_name, key, type, size, storage_id, previous_file_key, name):
         file=File(file_name=file_name, key=key, type=type, size=size, storage_id=storage_id, public_key=str(uuid4())[:100])
 
+        if name:
+            file.name = name
+        else:
+            file.name = file_name.split('.')[0]
+
         if previous_file_key:
             previous_file = File.query.filter_by(public_key = previous_file_key, status=BasicStatus.ACTIVE).first()
 
@@ -41,10 +46,9 @@ class File(Model):
 
             file.public_key = previous_file.public_key
             file.previous_file_id = previous_file.id
-        if name:
-            file.name = name
-        else:
-            file.name = file_name.split('.')[0]
+
+            if not name:
+                file.name = previous_file.name
 
         try:
             db.session.add(file)

@@ -19,3 +19,15 @@ services:
     volumes:
       - ./logs:/usr/src/app/logs
       - ./storage:/usr/src/app/storage
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports: 
+      - 7001:80
+    links:
+      - db
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_PORT=3306
