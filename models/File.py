@@ -49,7 +49,7 @@ class File(Model):
             file.previous_file_id = previous_file.id
 
             if not name:
-                file.name = previous_file.name + " V"+str(previous_files.count())
+                file.name = previous_file.name
 
         try:
             db.session.add(file)
