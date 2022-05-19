@@ -9,10 +9,10 @@ class File(Model):
 
     name = db.Column(db.String(100), nullable=False)
     file_name = db.Column(db.String(300), nullable=False)
-    key = db.Column(db.String(300), nullable=False)
+    key = db.Column(db.String(300), nullable=False, unique=True)
     type= db.Column(db.String(100), nullable=False)
     size = db.Column(db.BigInteger(), nullable=False)
-    public_key = db.Column(db.String(100), nullable=False)
+    public_key = db.Column(db.String(100), nullable=True)
 
     status = db.Column(db.String(100), nullable=False, default=BasicStatus.ACTIVE)
 
@@ -37,7 +37,8 @@ class File(Model):
             file.name = file_name.split('.')[0]
 
         if previous_file_key:
-            previous_file = File.query.filter_by(public_key = previous_file_key, status=BasicStatus.ACTIVE).first()
+            previous_files = File.query.filter_by(public_key = previous_file_key, status=BasicStatus.ACTIVE)
+            previous_file = previous_files.first()
 
             if not previous_file:
                 raise Exception('Previous version not found')
@@ -48,7 +49,7 @@ class File(Model):
             file.previous_file_id = previous_file.id
 
             if not name:
-                file.name = previous_file.name
+                file.name = previous_file.name + " V"+str(previous_files.count())
 
         try:
             db.session.add(file)
