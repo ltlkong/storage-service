@@ -31,8 +31,6 @@ class Auth:
             except jwt.ExpiredSignatureError as e:
                 abort(HTTPStatus.UNAUTHORIZED, message='Token expired')
             except Exception as e:
-                logging.error('Something went wrong while verify_token {}'.format(str(e)))
-
                 abort(HTTPStatus.UNAUTHORIZED, message='Invalid token')
 
             return f(*args, **kwargs)

@@ -107,5 +107,7 @@ class Storage(Model):
             'enabled_file_types': self.get_enabled_file_types(),
             'name': self.name,
             'status':self.status,
-            'type': self.type
+            'type': self.type,
+            'files_count': len(self.files)
+
         }
