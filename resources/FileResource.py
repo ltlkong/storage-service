@@ -6,7 +6,6 @@ from resources.BaseResource import BaseResource
 from common.response import Response
 
 auth=ServiceAuth()
-auth_account=Auth()
 
 class FileResource(BaseResource):
     # Get files data
@@ -48,7 +47,7 @@ class FileOperationPublicResource(BaseResource):
 
 class FileOperationResource(BaseResource):
     # Download file
-    @auth_account.verify_token
+    @auth.verify_key
     def get(self,file_key):
         data = FileService.download(internal_key=file_key)
 
